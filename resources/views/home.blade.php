@@ -4,7 +4,7 @@
 
 <div class="relative pt-10 pb-20 bg-gray-900">
     <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl  text-white">The most trusted selling platform in  <br class="lg:block hidden"> <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500  from-green-400  to-green-500">South Africa</span>.</h1>
+        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl  text-white">The most trusted selling platform in   <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500  from-green-400  to-green-500">South Africa</span>.</h1>
         <br>
         <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl  text-white">We <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500  from-green-400  to-green-500">pay</span> you to advertise.</h1>
         <div class="lg:flex">

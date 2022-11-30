@@ -21,7 +21,7 @@
             <a href="{{route('about')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">About</a>
         </li>
         <li class="mx-2 my-4 md:my-2">
-            <a href="{{route('apply')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Apply</a>
+            <a href="{{route('application.create')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Apply</a>
         </li>
         <li class="mx-2 my-4 md:my-2">
             <a href="{{route('listings.index')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Shop</a>
@@ -30,6 +30,20 @@
             <a href="{{route('listings.create')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Sell</a>
         </li>
 
+        <li class="mx-2 my-4 md:my-2">
+            <a href="/contact" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Contact</a>
+        </li>
+        @if(Auth::check())
+            @if(Auth::user()->is_admin)
+            <a href="{{url('/dashboard/dashboards/main')}}"><button class="bg-green-500 m-1 text-white font-[Poppins] duration-500 px-6 py-2 mx-2 hover:bg-green-400 rounded ">
+                    Admin
+                </button></a>
+            @elseif(Auth::user()->is_dealer_principal)
+            <a href="{{url('/dashboard/dashboards/main')}}"><button class="bg-green-500 m-1 text-white font-[Poppins] duration-500 px-6 py-2 mx-2 hover:bg-green-400 rounded ">
+                    Admin
+                </button></a>
+        @endif
+        @endif
         @guest
             <a href="{{route('register')}}"><button class="bg-green-500 m-1 text-white font-[Poppins] duration-500 px-6 py-2 mx-2 hover:bg-green-400 rounded ">
                     Sign Up

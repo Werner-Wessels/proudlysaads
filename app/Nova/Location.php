@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
@@ -11,6 +12,17 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Location extends Resource
 {
+    public static function availableForNavigation(Request $request)
+    {
+        if (Auth::user()->is_admin){
+            return true;
+        }
+
+        if (Auth::user()->is_dealer_principal){
+            return false;
+        }
+
+    }
     /**
      * The model the resource corresponds to.
      *

@@ -27,7 +27,12 @@ class ApplicationController extends Controller
      */
     public function create()
     {
-        return view('apply');
+
+        return view('apply')->with(
+            [
+                'user' => \Auth::user(),
+            ]
+        );
     }
 
     /**
@@ -39,27 +44,12 @@ class ApplicationController extends Controller
     public function store(StoreApplicationRequest $request)
     {
         // Form validation
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'subject'=>'required',
-            'message' => 'required'
-        ]);
+        $validated = $request->validated();
         //  Store data in database
-        Contact::create($request->all());
+        $application = Application::create($request->all());
         //  Send mail to admin
-        Mail::send('mail', array(
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'phone' => $request->get('phone'),
-            'subject' => $request->get('subject'),
-            'user_query' => $request->get('message'),
-        ), function($message) use ($request){
-            $message->from($request->email);
-            $message->to('werner@customcms.co.za', 'Admin')->subject($request->get('subject'));
-        });
-        return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
+       ApplicationCreated::dispatch($application);
+        return back()->with('success', 'We have received your application and we will get back to you very soon.');
 
 
 

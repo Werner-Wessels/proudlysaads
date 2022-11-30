@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('contact_number')->nullable();
-            $table->string('address1')->nullable();
-            $table->string('address2')->nullable();
-            $table->string('city')->nullable();
-            $table->string('province')->nullable();
+            $table->string('contact_number')->default('Required');
+            $table->string('address1')->default('Required');
+            $table->string('address2')->default('Required');
+            $table->string('city')->default('Required');
+            $table->string('province')->default('Required');
 
             $table->timestamps();
 

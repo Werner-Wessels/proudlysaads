@@ -2,24 +2,25 @@
 
 namespace App\Events;
 
-use App\Models\Application;
+use App\Models\Listing;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class ApplicationCreated
+class ListingCreated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public Application $application;
+    public Listing $listing;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(Application $application)
+    public function __construct(Listing $listing)
     {
-        $this->application = $application;
+        $this->listing = $listing;
     }
+
 }

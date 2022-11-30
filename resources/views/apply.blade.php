@@ -84,7 +84,7 @@ name="" id="" @include('layout.main')
                     @csrf
                     <div>
                         <label for="name" class="block mb-2 text-sm text-gray-400 dark:text-gray-200">Name and Surname</label>
-                        <input name="name" id="name" value="{{old('name')}}" type="text" placeholder="John Doe" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <input name="name" id="name" readonly value="{{$user->name}}" type="text" placeholder="John Doe" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
@@ -109,7 +109,12 @@ name="" id="" @include('layout.main')
 
                     <div>
                         <label for="email" class="block mb-2 text-sm text-gray-400 dark:text-gray-200">Email Address</label>
-                        <input name="email" id="email" type="email"  value="{{old('email')}}" placeholder="example@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <input readonly name="email" id="email" type="email"  value="{{$user->email}}" placeholder="example@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div>
+                        <label for="code" class="block mb-2 text-sm text-gray-400 dark:text-gray-200">Referral Code <span class="text-white text-xs">(if you have a referral code, please enter it here.)</span></label>
+                        <input name="code" id="code" value="{{old('code')}}"  type="text" placeholder="Optional Referral Code" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
@@ -47,7 +48,7 @@ class AuthController extends Controller
                 ->withSuccess('You have Successfully logged in');
         }
 
-        return redirect("login")->withSuccess('You have entered invalid credentials');
+        return redirect("login")->withErrors('You have entered invalid credentials');
     }
 
     /**
@@ -80,7 +81,7 @@ class AuthController extends Controller
             return view('home');
         }
 
-        return redirect("login")->withSuccess('Opps! You do not have access');
+        return redirect("login")->withSuccess('Thank you for your registration, please sign in below.');
     }
 
     /**
@@ -90,10 +91,14 @@ class AuthController extends Controller
      */
     public function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password'])
+        ]);
+
+        $profile = Profile::create([
+            'user_id' => $user->id,
         ]);
     }
 

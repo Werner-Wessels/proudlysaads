@@ -3,6 +3,8 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\ID;
@@ -11,6 +13,20 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Offer extends Resource
 {
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+
+        $user = Auth::user();
+
+        if ($user->is_admin === 1){
+            return $query;
+        } elseif($user->is_admin === 0) {
+            $listings = \App\Models\Listing::where('location_id', $user->location_id)->pluck('id');
+
+            return $query->whereIn('listing_id', $listings);
+        }
+    }
+
     /**
      * The model the resource corresponds to.
      *

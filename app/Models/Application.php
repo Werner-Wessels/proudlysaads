@@ -16,5 +16,6 @@ class Application extends Model
         'town',
         'province',
         'email',
+        'code',
     ];
 }

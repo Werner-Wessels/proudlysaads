@@ -3,6 +3,22 @@
 
 <div class="flex justify-content-center justify-center mx-auto">
     <main class="p-8 justify-center align-middle content-center">
+        @if ($errors->any())
+            <div class="err">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <div class="text-center p-4 mb-4 text-sm text-white bg-red-700 rounded-lg dark:bg-red-700 dark:text-white" role="alert">
+                            <span class="font-medium">{{ $error }}</span>
+                        </div>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        @if(session()->has('success'))
+            <div class="text-center p-4 mb-4 text-sm text-white bg-green-700 rounded-lg dark:bg-green-700 dark:text-white">
+                {{ session()->get('success') }}
+            </div>
+    @endif
         <!-- This is an example component -->
         <form action="{{route('offer.store', ['listing_id' => $listing->id])}}" method="POST">
             @csrf

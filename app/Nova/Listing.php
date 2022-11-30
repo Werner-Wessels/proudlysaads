@@ -2,6 +2,8 @@
 
 namespace App\Nova;
 use App\Models\Location;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\HasMany;
@@ -17,6 +19,17 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Listing extends Resource
 {
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        $user = Auth::user();
+        if ($user->is_admin === 1){
+            return $query;
+        }elseif($user->is_admin === 0){
+            return $query->where('location_id', '=' , $user->location_id);
+        }
+
+    }
+
     /**
      * The model the resource corresponds to.
      *

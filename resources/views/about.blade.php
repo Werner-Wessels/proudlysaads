@@ -4,7 +4,7 @@
 
 <div class="relative pt-10 pb-20  bg-gray-900">
     <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto lg:text-left xl:text-4xl dark:text-white">Honesty and integrity are not always part of the Marketplaces available on Social Media, this is why <br class="lg:block hidden"> <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 dark:from-green-400 dark:to-green-500">Tickey Turners</span> came into existence.</h1>
+        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto lg:text-left xl:text-4xl dark:text-white">Honesty and integrity are not always part of the Marketplaces available on Social Media, this is why <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 dark:from-green-400 dark:to-green-500">Tickey Turners</span> came into existence.</h1>
         <div class="lg:flex">
             <div class="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
                 <p class="sm:text-lg text-gray-400 dark:text-gray-400 lg:w-11/12">

@@ -1,5 +1,20 @@
 @include('layout.main')
-
+@if ($errors->any())
+    <div class="err">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <div class="text-center p-4 mb-4 text-sm text-white bg-red-700 rounded-lg dark:bg-red-700 dark:text-white" role="alert">
+                    <span class="font-medium">{{ $error }}</span>
+                </div>
+            @endforeach
+        </ul>
+    </div>
+@endif
+@if(session()->has('success'))
+    <div class="text-center p-4 mb-4 text-sm text-white bg-green-700 rounded-lg dark:bg-green-700 dark:text-white">
+        {{ session()->get('success') }}
+    </div>
+@endif
 <div class="relative pt-10  bg-gray-900">
     <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
         <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto  xl:text-4xl dark:text-white">Welcome back <strong class="text-green-500">Login</strong> below.</h1>

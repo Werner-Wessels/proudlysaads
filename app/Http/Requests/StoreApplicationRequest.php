@@ -24,12 +24,13 @@ class StoreApplicationRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string',
+
             'phone' => 'required|string|min:10|max:12|regex:/^([0-9\s\-\+\(\)]*)$/',
             'id_num' => 'required|string',
             'town' => 'required|string',
             'province' => 'required|string',
-            'email' => 'required|email',
+            'code' => 'string'
+
 
         ];
     }

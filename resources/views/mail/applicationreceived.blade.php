@@ -15,6 +15,6 @@
 <p>Town: {{$application->town}}</p>
 <p>Province: {{$application->province}}</p>
 <p>Email Address: {{$application->email}}</p>
-<p>Referral Code: </p>
+<p>Referral Code: {{$application->code}}</p>
 </body>
 </html>

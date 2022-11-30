@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\OfferCreated;
 use App\Models\Listing;
 use App\Models\Offer;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class OfferController extends Controller
 {
@@ -46,13 +49,30 @@ class OfferController extends Controller
         $request->validate([
             'offer' => 'required|integer',
         ]);
-        $offer= $request->offer;
+        $price= $request->offer;
 
-        Offer::create([
+        $offer = Offer::create([
             'listing_id' => $id,
             'user_id' => auth()->user()->id,
-            'price' => $offer
+            'price' => $price
         ]);
+
+        $listing = Listing::where('id', '=', $offer->listing_id)->first();
+
+        $seller = User::where('id', '=', $listing->user_id )->first();
+
+
+
+        Mail::send('mail.adminnewoffer', array(
+            'title' => $listing->title,
+            'price' => $listing->price,
+            'offer' => $request->get('offer'),
+        ), function($message) use ($seller, $request){
+            $message->from('info@tickeyturners.co.za');
+            $message->to($seller->email, 'Admin')->subject('A new offer has been made on your listing.');
+        });
+
+        return redirect()->back()->with('success','Thank you for you Offer!! We will notify the person that uploaded the listing of your offer for their consideration.');
     }
 
     /**

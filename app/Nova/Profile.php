@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Dniccum\PhoneNumber\PhoneNumber;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Email;
 use Laravel\Nova\Fields\HasMany;
@@ -14,6 +15,17 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Profile extends Resource
 {
+    public static function availableForNavigation(Request $request)
+    {
+        if (Auth::user()->is_admin){
+            return true;
+        }
+
+        if (Auth::user()->is_dealer_principal){
+            return false;
+        }
+
+    }
     /**
      * The model the resource corresponds to.
      *

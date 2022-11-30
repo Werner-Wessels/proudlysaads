@@ -103,6 +103,7 @@ return [
         HandleInertiaRequests::class,
         DispatchServingNovaEvent::class,
         BootTools::class,
+        \App\Http\Middleware\Admin::class,
     ],
 
     'api_middleware' => [

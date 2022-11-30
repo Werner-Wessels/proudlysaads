@@ -7,6 +7,7 @@ use App\Models\Offer;
 use App\Models\Profile;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
 {
@@ -49,7 +50,7 @@ class ProfileController extends Controller
     public function show($id)
     {
         $user = Auth::user();
-        $listings = Listing::with('offers')->where('user_id', '=', '1')->get();
+        $listings = Listing::with('offers')->where('user_id', '=', Auth::user()->id)->get();
         $profile = Profile::all()->where('user_id', '=', \Auth::user()->id);
 
 
@@ -89,7 +90,7 @@ class ProfileController extends Controller
     {
         $validated=$request->validate(
             [
-                'contact_number' => 'required|integer',
+                'contact_number' => 'required',
                 'address1' => 'required|string',
                 'address2' => 'required|string',
                 'city' => 'required|string',

@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ListingCreated;
 use App\Models\Category;
 use App\Models\Listing;
 use App\Models\Location;
+use App\Models\Profile;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
@@ -49,7 +54,7 @@ class ListingController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -67,7 +72,7 @@ class ListingController extends Controller
             $name = now()->timestamp.".{$request->image_url->getClientOriginalName()}";
             $path = $request->file('image_url')->storeAs('public', $name);
 
-            Listing::create([
+            $listing = Listing::create([
                 'title' => $request->title,
                 'description' => $request->description,
                 'condition' => $request->condition,
@@ -77,7 +82,29 @@ class ListingController extends Controller
                 'location_id' => $request->location_id,
             ]);
 
-            return redirect()->back()->with('success','Listing Uploaded Successfully!! Please allow your Branch Prinicpal to verify this listing before it will be live.');
+
+            $admin = User::where('location_id','=', $listing->location_id)->first();
+
+            $listing->email = $admin->email;
+
+            $seller = Auth::user();
+
+            $profile = Profile::where('user_id', '=', $seller->id)->first();
+
+            Mail::send('mail.newlisting', array(
+                'seller' => $seller->name,
+                'sellerMail' => $seller->email,
+                'sellerContactNumber' => $profile->contact_number,
+                'title' => $request->get('title'),
+                'description' => $request->get('description'),
+                'condition' => $request->get('condition'),
+                'price' => $request->get('price'),
+            ), function($message) use ($listing, $request){
+                $message->from('info@tickeyturners.co.za');
+                $message->to($listing->email, 'Admin')->subject('A new listing has been created in your area');
+            });
+
+            return redirect()->back()->with('success','Listing Uploaded Successfully!! Please allow your Branch Principal to verify this listing before it will be live.');
 
     }
 

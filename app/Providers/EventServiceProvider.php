@@ -5,10 +5,11 @@ namespace App\Providers;
 use App\Events\ApplicationCreated;
 use App\Listeners\SendApplicationDetailsToAdmin;
 use App\Listeners\SendApplicationWelcomeMailToUser;
+use App\Listeners\SendNewListingNotificationToBranchPrincipal;
+use App\Listeners\SendNewOfferNotificationToBranchPrincipal;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -17,13 +18,19 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array<class-string, array<int, class-string>>
      */
-    protected $listen = [
+    protected array $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
         ApplicationCreated::class => [
             SendApplicationDetailsToAdmin::class,
             SendApplicationWelcomeMailToUser::class,
+        ],
+        ListingCreated::class => array(
+            SendNewListingNotificationToBranchPrincipal::class,
+        ),
+        OfferCreated::class => [
+            SendNewOfferNotificationToBranchPrincipal::class,
         ]
     ];
 
@@ -42,7 +49,7 @@ class EventServiceProvider extends ServiceProvider
      *
      * @return bool
      */
-    public function shouldDiscoverEvents()
+    public function shouldDiscoverEvents(): bool
     {
         return false;
     }

@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Gravatar;
@@ -15,6 +16,18 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class User extends Resource
 {
+
+    public static function availableForNavigation(Request $request)
+    {
+        if (Auth::user()->is_admin){
+            return true;
+        }
+
+        if (Auth::user()->is_dealer_principal){
+            return false;
+        }
+
+    }
     /**
      * The model the resource corresponds to.
      *
