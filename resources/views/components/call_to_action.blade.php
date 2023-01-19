@@ -3,9 +3,9 @@
         <div class="justify-center text-center gap-6 md:text-left md:flex lg:items-center  lg:gap-16">
             <div class="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
                 <h1 class="text-4xl text-gray-700 font-bold md:text-5xl">It pays to sell with <span
-                            class="text-green-500">Tickey Turners</span></h1>
-                <p class="text-gray-700 text-lg">Be paid to advertise your movable good with Tickey Turners, we will pay
-                    you an additional 1% when your items are sold through Tickey Turners.</p>
+                            class="text-green-500">Proudly SA Ads</span></h1>
+                <p class="text-gray-700 text-lg">Be paid to advertise your movable good with Proudly SA Ads, we will pay
+                    you an additional 1% when your items are sold through Proudly SA Ads.</p>
                 <div class="flex flex-row-reverse flex-wrap justify-center gap-4 md:gap-6 md:justify-end">
                     <button type="button" title="Start buying"
                             class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">

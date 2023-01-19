@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Listing extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'promoted_at' => 'datetime',
+        'promotion_expires_on' => 'datetime',
+    ];
+
+
     protected $fillable = [
         'title',
         'description',
@@ -35,6 +42,11 @@ class Listing extends Model
     public function offers()
     {
         return $this->hasMany(Offer::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 
     public function location()

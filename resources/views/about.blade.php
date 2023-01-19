@@ -4,22 +4,22 @@
 
 <div class="relative pt-10 pb-20  bg-gray-900">
     <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto lg:text-left xl:text-4xl dark:text-white">Honesty and integrity are not always part of the Marketplaces available on Social Media, this is why <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 dark:from-green-400 dark:to-green-500">Tickey Turners</span> came into existence.</h1>
+        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto lg:text-left xl:text-4xl text-white">Honesty and integrity are not always part of the Marketplaces available on Social Media, this is why <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 from-green-400 to-green-500">Proudly SA Ads</span> came into existence.</h1>
         <div class="lg:flex">
             <div class="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
-                <p class="sm:text-lg text-gray-400 dark:text-gray-400 lg:w-11/12">
+                <p class="sm:text-lg text-gray-400 text-gray-400 lg:w-11/12">
 
-                    Tickey Turners wants to show South Africans that honesty and integrity still exists. Furthermore Tickey Turners wants to show South Africans that it <strong class="font-bold underline text-green-500">pays to advertise</strong>.
+                    Proudly SA Ads wants to show South Africans that honesty and integrity still exists. Furthermore Proudly SA Ads wants to show South Africans that it <strong class="font-bold underline text-green-500">pays to advertise</strong>.
                     <br><br>
-                    <strong>Every branch of Tickey Turners pays their sellers to advertise.</strong>
+                    <strong>Every branch of Proudly SA Ads pays their sellers to advertise.</strong>
                 </p>
-                <span class="block font-semibold text-gray-400 dark:text-gray-400">Yes, this is the truth. If you advertise with Tickey Turners and your item is sold through our Platform, you will receive 1% of the agreed selling price back from your Tickey Turners Branch Principal.</span>
+                <span class="block font-semibold text-gray-400 text-gray-400">Yes, this is the truth. If you advertise with Proudly SA Ads and your item is sold through our Platform, you will receive 1% of the agreed selling price back from your Proudly SA Ads Branch Principal.</span>
 
 
-                <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto lg:text-left xl:text-4xl dark:text-white">So what are you waiting for?
+                <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto lg:text-left xl:text-4xl text-white">So what are you waiting for?
                     <br>Follow the link below to start selling.</h1>
 
-                <button class="rounded bg-green-500 p-4 font-bold text-xl text-white"><a href="/sell">Start Selling Now!</a></button>
+                <button class="rounded bg-green-500 p-4 font-bold text-xl text-white"><a href="{{route('listings.create')}}">Start Selling Now!</a></button>
 
             </div>
             <div class="mt-12 md:mt-0 lg:absolute -right-2 lg:w-5/12">
@@ -35,7 +35,7 @@
 
 <div class=" relative pt-40 pb-20 lg:pt-44 bg-gray-900">
     <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto  xl:text-7xl dark:text-white">It <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 dark:from-green-400 dark:to-green-500">Pays</span> to Advertise.</h1>
+        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto  xl:text-7xl text-white">It <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 from-green-400 to-green-500">Pays</span> to Advertise.</h1>
         <div class="">
             <div class="md:flex flex-wrap mt-8 p-8">
                 <div class="md:w-1/3 text-center content-center items-center justify-center justify-content-center">
@@ -43,7 +43,7 @@
 
                     <div class="flex items-center mx-auto"><x-svg.step1/></div>
 
-                    <p class="p-8 text-center text-xl text-white">List your movable goods for free on Tickey Turners. List the details of the item and your asking price.</p>
+                    <p class="p-8 text-center text-xl text-white">List your movable goods for free on Proudly SA Ads. List the details of the item and your asking price.</p>
 
                 </div>
                 <div class="md:w-1/3">
@@ -66,44 +66,46 @@
 
                     <x-svg.step4/>
 
-                    <p class="p-8 text-center text-xl text-white">Receive multiple offers from Users on the Tickey Turners Platform while you can rest assured knowing that your professional Tickey Turners Branch Principal will vet the offer to ensure that your time is not wasted.</p>
+                    <p class="p-8 text-center text-xl text-white">Receive multiple offers from Users on the Proudly SA Ads Platform while you can rest assured knowing that your professional Proudly SA Ads Branch Principal will vet the offer to ensure that your time is not wasted.</p>
                 </div>
 
                 <div class="md:w-1/3">
                     <h3 class="text-white text-2xl text-center">Step 5</h3>
 
                     <x-svg.step5/>
-                    <p class="p-8 text-center text-xl text-white">Once the offers are vetted and all parties are satisfied, you will be paid an additional 1% of the agreed purchase price for advertising with Tickey Turners</p>
+                    <p class="p-8 text-center text-xl text-white">Once the offers are vetted and all parties are satisfied, you will be paid an additional 1% of the agreed purchase price for advertising with Proudly SA Ads</p>
                 </div>
 
 
             </div>
         </div>
 
-        <div class="bg-white relative pt-40 pb-20 lg:pt-44 dark:bg-gray-900">
+        <div class="relative pt-40 pb-20 lg:pt-44 bg-gray-900">
             <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-                <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto lg:text-left xl:text-4xl dark:text-white">Yes, we are going local in every town in <br class="lg:block hidden"> <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 dark:from-green-400 dark:to-green-500">South Africa</span>.</h1>
+                <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto lg:text-left xl:text-4xl text-white">Yes, we are going local in every town in <br class="lg:block hidden"> <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 from-green-400 to-green-500">South Africa</span>.</h1>
                 <div class="lg:flex">
                     <div class="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
-                        <p class="sm:text-lg text-gray-700 dark:text-gray-400 lg:w-11/12">
+                        <p class="sm:text-lg text-white text-white lg:w-11/12">
 
-                            Trust, Integrity, Honesty and Reliability are just some of the characteristics you will find in every Tickey Turners Branch Principal. He will you his passion, contacts and experience to facilitate your transaction speedily and to your satisfaction.
+                            Trust, Integrity, Honesty and Reliability are just some of the characteristics you will find in every Proudly SA Ads Branch Principal. Your Branch Principal will assist you with his passion, contacts and experience to facilitate your transaction speedily and to your satisfaction.
                             <br><br>
                             <strong>This, if spelled out means every transaction is a one-on-one interaction.</strong>
                         </p>
-                        <span class="block font-semibold text-gray-500 dark:text-gray-400">No more Doubt, no more Scams and no more Get-Rich-Quick Schemes</span>
+                        <span class="block font-semibold text-white text-white">No more Doubt, no more Scams and no more Get-Rich-Quick Schemes</span>
 
 
-                        <div class="dark:text-gray-300">
+                        <div class="text-white">
                     <span>
-                        <div class="text-xl"><strong><p>Trust, Honesty and Integrity</p></strong><br></div>
-                        <p class="sm:text-lg text-gray-700 dark:text-gray-400 lg:w-11/12">
-                            On a true South African Platform, where you can be guaranteed serious buying and selling. <strong class="text-green-500">Tickey Turners... where it always pays to advertise</strong>.
+                        <div class="text-xl text-white"><strong><p>Trust, Honesty and Integrity</p></strong><br></div>
+                        <p class="sm:text-lg text-white lg:w-11/12">
+                            On a true South African Platform, where you can be guaranteed serious buying and selling. <strong class="text-green-500">Proudly SA Ads... where it always pays to advertise</strong>.
 
 
                         </p>
                     </span>
                         </div>
+
+                        <button class="flex mx-auto justify-center rounded bg-green-500 p-4 font-bold text-xl text-white"><a href="{{route('application.create')}}">Become a Branch Principal Now!</a></button>
 
                     </div>
                     <div class="mt-12 md:mt-0 lg:absolute -right-2 lg:w-5/12">

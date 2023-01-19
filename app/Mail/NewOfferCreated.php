@@ -34,7 +34,7 @@ class NewOfferCreated extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: 'applications@tickeyturners.co.za',
+            from: 'applications@proudlysaads.co.za',
             to: $this->offer->email,
             subject: 'A new offer has been made on one of your listings',
         );

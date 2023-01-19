@@ -19,15 +19,6 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::check()){
-            return redirect('/');
-        }
-
-        if(Auth::user()->is_admin){
         return $next($request);
-    }elseif (Auth::user()->is_dealer_principal){
-        return $next($request);
-    }
-        throw abort('404');
     }
 }

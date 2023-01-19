@@ -29,11 +29,8 @@ class OfferController extends Controller
      */
     public function create(Request $request)
     {
-        $id = $request->query('listing_id');
-        $listing = Listing::find($id);
-        return view('offer.create')->with([
-            'listing' => $listing
-        ]);
+//        dd($request);
+
     }
 
     /**
@@ -68,7 +65,7 @@ class OfferController extends Controller
             'price' => $listing->price,
             'offer' => $request->get('offer'),
         ), function($message) use ($seller, $request){
-            $message->from('info@tickeyturners.co.za');
+            $message->from('info@proudlysaads.co.za');
             $message->to($seller->email, 'Admin')->subject('A new offer has been made on your listing.');
         });
 

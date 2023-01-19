@@ -33,8 +33,8 @@ class ApplicationSuccessfullyMade extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: 'applications@tickeyturners.co.za',
-            to: 'applications@tickeyturners.co.za',
+            from: 'applications@proudlysaads.co.za',
+            to: 'applications@proudlysaads.co.za',
             subject: 'A New Application Successfully Made.',
         );
     }

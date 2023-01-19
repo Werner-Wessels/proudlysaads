@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events\ListingCreated;
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Listing;
 use App\Models\Location;
 use App\Models\Profile;
@@ -24,12 +25,8 @@ class ListingController extends Controller
 
     public function index()
     {
-//        $listings = Listing::all();
-//        $categories = Category::all();
-//        $locations = Location::all();
-//        return View::
         return view('shop', [
-            'listings' => Listing::with('category', 'location')->where([['is_approved', '=', true],['is_active','=',true]])->paginate(10),
+            'listings' => Listing::orderBy('promoted', 'DESC')->orderBy('created_at', 'DESC')->with('category', 'location', 'images')->where([['is_approved', '=', true],['is_active','=',true]])->paginate(10),
             'categories' => Category::all(),
             'locations' => Location::all()
         ]);
@@ -58,34 +55,34 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-
-      $validated = $request->validate([
-           'title' => 'required|string',
-           'description' => 'required|string',
+      $this->validate($request,[
+           'title' => 'required|string|max:255',
+           'description' => 'required|string|max:855',
            'condition' => 'required|string',
-           'image_url' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
            'price' => 'required',
            'category_id' => 'required',
            'location_id' => 'required'
         ]);
 
-            $name = now()->timestamp.".{$request->image_url->getClientOriginalName()}";
-            $path = $request->file('image_url')->storeAs('public', $name);
+      $listing = new Listing;
+      $listing->title = $request->title;
+      $listing->description = $request->description;
+      $listing->condition = $request->condition;
+      $listing->price = $request->price;
+      $listing->category_id = $request->category_id;
+      $listing->location_id = $request->location_id;
+      $listing->save();
+        foreach ($request->file('images') as $imagefile) {
+            $image = new Image;
+            $path = $imagefile->store('storage', ['disk' =>   'my_files']);
+            $image->img_path = $path;
+            $image->listing_id = $listing->id;
+            $image->save();
+        }
 
-            $listing = Listing::create([
-                'title' => $request->title,
-                'description' => $request->description,
-                'condition' => $request->condition,
-                'image_url' => $name,
-                'price' => $request->price,
-                'category_id' => $request->category_id,
-                'location_id' => $request->location_id,
-            ]);
+        $admin = User::where('location_id','=', $listing->location_id)->first();
 
-
-            $admin = User::where('location_id','=', $listing->location_id)->first();
-
-            $listing->email = $admin->email;
+            $listing->email = 'info@proudlysaads.co.za';
 
             $seller = Auth::user();
 
@@ -100,11 +97,11 @@ class ListingController extends Controller
                 'condition' => $request->get('condition'),
                 'price' => $request->get('price'),
             ), function($message) use ($listing, $request){
-                $message->from('info@tickeyturners.co.za');
-                $message->to($listing->email, 'Admin')->subject('A new listing has been created in your area');
+                $message->from('noreply@proudlysaads.co.za');
+                $message->to($listing->email, 'Admin')->subject('A new listing has been created, please review');
             });
 
-            return redirect()->back()->with('success','Listing Uploaded Successfully!! Please allow your Branch Principal to verify this listing before it will be live.');
+            return redirect()->back()->with('success','Listing Uploaded Successfully!! Please allow Proudly SA Ads to verify this listing before it will be live.');
 
     }
 
@@ -116,7 +113,9 @@ class ListingController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('listings.show')->with([
+            'listing' => Listing::with('user', 'images')->where('id','=', $id)->firstOrFail()
+        ]);
     }
 
     /**
@@ -146,25 +145,17 @@ class ListingController extends Controller
             'title' => 'required|string',
             'description' => 'required|string',
             'condition' => 'required|string',
-            'image_url' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',
             'price' => 'required',
             'category_id' => 'required',
             'location_id' => 'required'
         ]);
         $listing = Listing::findOrFail($id);
-        if($request->file != ''){
-            $name = now()->timestamp.".{$request->image_url->getClientOriginalName()}";
-            $path = $request->file('image_url')->storeAs('public', $name);
-
-            $listing->image_url = $name;
-        }
         $listing->update([
             'title' => $request->get('title'),
             'description' => $request->get('description'),
             'price' => $request->get('price'),
             'category_id' => $request->get('category_id'),
             'location_id' => $request->get('location_id'),
-            'image_url' => $listing->image_url,
         ]);
 
         return redirect()->back()->with('success','Listing Updated Successfully!!');
@@ -183,4 +174,9 @@ class ListingController extends Controller
 
         return redirect()->back()->with('success','Listing Deleted Successfully!!');
     }
+
+
+
+
+
 }

@@ -20,8 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->string('title');
             $table->string('description');
-            $table->string('image_url');
-            $table->decimal('price');
+            $table->decimal('price', '10', '2');
             $table->string('condition');
             $table->boolean('is_active')->default(false);
             $table->boolean('is_approved')->default(false);

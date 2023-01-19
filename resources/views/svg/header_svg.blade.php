@@ -1,6 +1,6 @@
 <div class="max-w-sm">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="940" zoomAndPan="magnify"
-         viewBox="0 0 705 591.000005" height="788" preserveAspectRatio="xMidYMid meet" version="1.0">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"   zoomAndPan="magnify"
+         viewBox="0 0 705 591.000005" height="300" preserveAspectRatio="xMidYMid meet" version="1.0">
         <path fill="#79ed7a"
               d="M 201.757812 165.582031 C 258.421875 108.917969 242.199219 73.40625 280.972656 47.171875 C 340.636719 6.804688 451.988281 41.539062 517.683594 97.058594 C 598.144531 165.066406 639.660156 289.230469 592.371094 401.566406 C 542.007812 521.195312 409.5 583.296875 291.261719 564.578125 C 185.671875 547.867188 81.878906 465.195312 71.480469 366.035156 C 70.351562 355.285156 65.375 297.191406 100.277344 247.097656 C 129.125 205.695312 156.835938 210.5 201.757812 165.582031 "
               fill-opacity="1" fill-rule="nonzero"/>

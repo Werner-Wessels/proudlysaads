@@ -49,7 +49,7 @@ class ApplicationController extends Controller
         $application = Application::create($request->all());
         //  Send mail to admin
        ApplicationCreated::dispatch($application);
-        return back()->with('success', 'We have received your application and we will get back to you very soon.');
+        return back()->with('success', 'We have received your application please check your emails for our response!');
 
 
 

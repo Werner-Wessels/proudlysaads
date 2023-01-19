@@ -29,7 +29,7 @@ class StoreApplicationRequest extends FormRequest
             'id_num' => 'required|string',
             'town' => 'required|string',
             'province' => 'required|string',
-            'code' => 'string'
+
 
 
         ];

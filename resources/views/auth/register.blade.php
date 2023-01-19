@@ -2,7 +2,7 @@
 
 <div class="relative pt-10  bg-gray-900">
     <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto  xl:text-4xl dark:text-white">Welcome, its great to have you join us, please <strong class="text-green-500">Register</strong> below.</h1>
+        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto  xl:text-4xl text-white">Welcome, its great to have you join us, please <strong class="text-green-500">Register</strong> below.</h1>
     </div>
 </div>
 
@@ -13,9 +13,9 @@
                 <form class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-1" action="{{ route('register.post') }}" method="POST">
                     @csrf
                     <div>
-                        <label for="name" class="block mb-2 text-sm text-gray-400 dark:text-gray-200">Name and Surname</label>
+                        <label for="name" class="block mb-2 text-sm text-gray-400 text-gray-200">Name and Surname</label>
                         <div class="col-md-6">
-                            <input type="text" id="name" placeholder="Your Name and Surname" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="name" required autofocus>
+                            <input type="text" id="name" placeholder="Your Name and Surname" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="name" required autofocus>
                             @if ($errors->has('name'))
                                 <span class="text-danger">{{ $errors->first('name') }}</span>
                             @endif
@@ -23,8 +23,8 @@
                     </div>
 
                     <div>
-                        <label class="block mb-2 text-sm text-gray-400 dark:text-gray-200">Email Address</label>
-                            <input type="text" placeholder="example@example.com" id="email_address" class="form-block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="email" required autofocus>
+                        <label class="block mb-2 text-sm text-gray-400 text-gray-200">Email Address</label>
+                            <input type="text" placeholder="example@example.com" id="email_address" class="form-block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="email" required autofocus>
                             @if ($errors->has('email'))
                                 <span class="text-danger">{{ $errors->first('email') }}</span>
                             @endif
@@ -32,9 +32,9 @@
                     </div>
 
                     <div>
-                        <label for="password" class="block mb-2 text-sm text-gray-400 dark:text-gray-200">Password</label>
+                        <label for="password" class="block mb-2 text-sm text-gray-400 text-gray-200">Password</label>
                         <div class="col-md-6">
-                            <input type="password" placeholder="Password" id="password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="password" required>
+                            <input type="password" placeholder="Password" id="password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="password" required>
                             @if ($errors->has('password'))
                                 <span class="text-danger">{{ $errors->first('password') }}</span>
                             @endif

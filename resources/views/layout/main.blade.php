@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0C1PNCNH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PZ0C1PNCNH');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,11 +20,26 @@
             let list = document.querySelector('ul');
             e.name === 'menu' ? (e.name = "close", list.classList.remove('top-[80px]'),list.classList.add('opacity-100'),list.classList.remove('absolute')):( e.name = "menu" , list.classList.add('top-[80px]') , list.classList.remove('opacity-100'), list.classList.add('absolute'))
         }
+
+        (function($){
+            window.onbeforeunload = function(e){
+                window.name += ' [' + $(window).scrollTop().toString() + '[' + $(window).scrollLeft().toString();
+            };
+            $.maintainscroll = function() {
+                if(window.name.indexOf('[') > 0)
+                {
+                    var parts = window.name.split('[');
+                    window.name = $.trim(parts[0]);
+                    window.scrollTo(parseInt(parts[parts.length - 1]), parseInt(parts[parts.length - 2]));
+                }
+            };
+            $.maintainscroll();
+        })(jQuery);
     </script>
 
     @vite('resources/css/app.css')
 
-    <title>Tickey Turners</title>
+    <title>Proudly SA Ads</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -405,7 +429,7 @@
 
             body {
                 font-family : Urbanist, sans-serif;
-                @apply bg-white dark:bg-gray-900
+                @apply bg-white bg-gray-900
             }
 
             .navbar-active .hamburger div:first-child {

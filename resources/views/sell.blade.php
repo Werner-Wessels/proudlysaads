@@ -7,7 +7,7 @@
                     <div class="err">
                         <ul>
                             @foreach ($errors->all() as $error)
-                                <div class="text-center p-4 mb-4 text-sm text-white bg-red-700 rounded-lg dark:bg-red-700 dark:text-white" role="alert">
+                                <div class="text-center p-4 mb-4 text-sm text-white bg-red-700 rounded-lg bg-red-700 text-white" role="alert">
                                     <span class="font-medium">{{ $error }}</span>
                                 </div>
                             @endforeach
@@ -15,16 +15,16 @@
                     </div>
                 @endif
                 @if(session()->has('success'))
-                    <div class="text-center p-4 mb-4 text-sm text-white bg-green-700 rounded-lg dark:bg-green-700 dark:text-white">
+                    <div class="text-center p-4 mb-4 text-sm text-white bg-green-700 rounded-lg bg-green-700 text-white">
                         {{ session()->get('success') }}
                     </div>
                 @endif
-                <h1 class="text-2xl font-semibold tracking-wider text-gray-200 capitalize dark:text-white">
-                    Thank you for putting your trust with Tickey Turners
+                <h1 class="text-2xl font-semibold tracking-wider text-gray-200 capitalize text-white">
+                    Thank you for putting your trust with Proudly SA Ads
                 </h1>
 
-                <p class="mt-4 text-gray-500 dark:text-gray-200">
-                    Please complete all the details required below. Once the listing is received by your allocated Tickey Turners Branch Principal, he will approve your listing and you will start receiving offers.
+                <p class="mt-4 text-gray-200 ">
+                    Please complete all the details required below. Once the listing is received we will approve your listing and you will start receiving offers.
                 </p>
 
 
@@ -32,43 +32,43 @@
                 <form action="{{route('listings.store')}}" method="POST" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-1" enctype="multipart/form-data">
                     @csrf
                     <div>
-                        <label class="block mb-2 text-sm text-gray-200 dark:text-gray-200">Name of Item</label>
-                        <input type="text" id="title" name="title" placeholder="The name of your item" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <label for="title" class="block mb-2 text-sm text-gray-200 text-gray-200">Name of Item</label>
+                        <input value="{{old('title')}}" type="text" id="title" name="title" placeholder="The name of your item" class="block w-full px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
-                        <label class="block mb-2 text-sm text-gray-200 dark:text-gray-200">Description</label>
-                        <textarea  placeholder="Tell us more about what you are selling. The more we know the easier we can sell the item." class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="description" id="description" cols="50" rows="4"></textarea>
+                        <label for="description" class="block mb-2 text-sm text-gray-200 text-gray-200">Description</label>
+                        <textarea class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="description" id="description" cols="50" rows="4">{{ old('description') }}</textarea>
 
                     </div>
 
                     <div>
-                        <label for="condition" class="block mb-2 text-sm text-gray-200 dark:text-gray-200">Condition</label>
-                        <select name="condition" id="condition"  required class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600
-                        dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
-                            <option disabled selected>Select One Option</option>
-                            <option value="New">New</option>
-                            <option value="Almost New">Almost New</option>
-                            <option value="Used">Used</option>
-                            <option value="Repairs Required">Requires Repairs</option>
+                        <label for="condition" class="block mb-2 text-sm text-gray-200 text-gray-200">Condition</label>
+                        <select value="{{old('condition')}}" name="condition" id="condition"  required class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600
+                        bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+
+                            <option value="New" @if (old('condition') == 'New') selected="selected" @endif>New</option>
+                            <option value="Almost New" @if (old('condition') == 'Almost New') selected="selected" @endif>Almost Mew</option>
+                            <option value="Used" @if (old('condition') == 'Used') selected="selected" @endif>Used</option>
+                            <option value="Repairs Required" @if (old('condition') == 'Repairs Required') selected="selected" @endif>Repairs Required</option>
                         </select>
                     </div>
 
 
 
                    <div>
-                       <label for="image_url" class="block mb-2 text-sm text-gray-200 dark:text-gray-200">Select your Image</label>
-                       <input type="file" name="image_url" id="image_url" accept="image/*"  required class="dark:text-gray-200">
+                       <label for="image_url" class="block mb-2 text-sm text-gray-200 text-gray-200">Select your Image</label>
+                       <input type="file" name="images[]" id="image_url" accept="image/*" required multiple class="text-gray-200">
                    </div>
 
                     <div>
-                        <label class="block mb-2 text-sm text-gray-200 dark:text-gray-200">Price (R)</label>
-                        <input type="number" name="price" id="price" min="0" step="0.01" placeholder="1000.00" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <label for="price" class="block mb-2 text-sm text-gray-200 text-gray-200">Price (R)</label>
+                        <input type="number" value="{{old('price')}}" name="price" id="price" min="0" step="0.01" placeholder="1000.00" class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
-                        <label class="block mb-2 text-sm text-gray-200 dark:text-gray-200">Category</label>
-                        <select name="category_id" id="category_id" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+                        <label class="block mb-2 text-sm text-gray-200 text-gray-200">Category</label>
+                        <select name="category_id" id="category_id" class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
                             @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
@@ -76,8 +76,8 @@
                     </div>
 
                     <div>
-                        <label class="block mb-2 text-sm text-gray-200 dark:text-gray-200">Location</label>
-                        <select name="location_id" id="location_id" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-600 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+                        <label class="block mb-2 text-sm text-gray-200 text-gray-200">Location</label>
+                        <select name="location_id" id="location_id" class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
                             @foreach($locations as $location)
                                 <option value="{{$location->id}}">{{$location->name}}</option>
                             @endforeach

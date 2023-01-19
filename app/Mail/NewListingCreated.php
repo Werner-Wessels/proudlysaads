@@ -35,7 +35,7 @@ class NewListingCreated extends Mailable
     public function envelope($listing)
     {
         return new Envelope(
-            from: 'applications@tickeyturners.co.za',
+            from: 'info@proudlysaads.co.za',
             to: $listing->email,
             subject: 'A new listing has been created in your area.',
         );

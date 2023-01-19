@@ -34,7 +34,7 @@ class WelcomeEmailAfterApplication extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: 'applications@tickeyturners.co.za',
+            from: 'applications@proudlysaads.co.za',
             to: $this->application->email,
             subject: 'We have received your application.',
         );

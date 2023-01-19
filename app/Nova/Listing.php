@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Currency;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
@@ -50,7 +52,7 @@ class Listing extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title', 'condition',
     ];
 
     /**
@@ -68,7 +70,6 @@ class Listing extends Resource
             BelongsTo::make('Category'),
             Text::make('Title')->required(),
             Textarea::make('Description')->required(),
-            Image::make('Image', 'image_url')->required(),
             Currency::make('Price')->required(),
             Select::make('Condition', 'condition')->required()->sortable()->options(
                 [
@@ -80,10 +81,13 @@ class Listing extends Resource
             )->displayUsingLabels(),
             Boolean::make('Active', 'is_active')->hideWhenCreating(),
             Boolean::make('Approved', 'is_approved')->hideWhenCreating(),
+            Boolean::make('Promoted', 'promoted'),
+            DateTime::make('Promoted On', 'promoted_at'),
+            DateTime::make('Promotion Expires On', 'promotion_expires_on'),
             Select::make('Location', 'location_id')->options(function () {
                 return array_filter(Location::pluck('name', 'id')->toArray());
             })->displayUsingLabels(),
-            HasMany::make('Offers'),
+            HasMany::make('Images'),
 
 
 
@@ -111,7 +115,9 @@ class Listing extends Resource
      */
     public function filters(NovaRequest $request)
     {
-        return [];
+        return [
+            new Filters\Active,
+        ];
     }
 
     /**

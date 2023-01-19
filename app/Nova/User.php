@@ -3,9 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules;
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\HasOne;
@@ -16,22 +14,10 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class User extends Resource
 {
-
-    public static function availableForNavigation(Request $request)
-    {
-        if (Auth::user()->is_admin){
-            return true;
-        }
-
-        if (Auth::user()->is_dealer_principal){
-            return false;
-        }
-
-    }
     /**
      * The model the resource corresponds to.
      *
-     * @var string
+     * @var class-string<\App\Models\User>
      */
     public static $model = \App\Models\User::class;
 
@@ -60,7 +46,7 @@ class User extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            ID::make()->sortable()->hide(),
+            ID::make()->sortable(),
 
             Gravatar::make()->maxWidth(50),
 
@@ -78,11 +64,10 @@ class User extends Resource
                 ->onlyOnForms()
                 ->creationRules('required', Rules\Password::defaults())
                 ->updateRules('nullable', Rules\Password::defaults()),
-            Boolean::make('Is Admin', 'is_admin')->hideWhenUpdating()->hideWhenCreating(),
-            Boolean::make('Is Dealer Principal', 'is_dealer_principal')->hideWhenUpdating()->hideWhenCreating(),
 
+            \Laravel\Nova\Fields\Image::make('Identity Document', 'id_img_path'),
+            \Laravel\Nova\Fields\Image::make('User Selfie', 'selfie_path'),
             HasMany::make('Listings'),
-            HasMany::make('Offers'),
             HasOne::make('Profile'),
         ];
     }
