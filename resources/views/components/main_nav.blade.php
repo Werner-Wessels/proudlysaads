@@ -25,17 +25,6 @@
             <a href="{{route('listings.index')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Buy</a>
         </li>
 
-
-
-{{--        <li class="mx-2 my-4 md:my-2">--}}
-{{--            <a href="{{route('about')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Categories</a>--}}
-{{--        </li>--}}
-{{--        <li class="mx-2 my-4 md:my-2">--}}
-{{--            <a href="{{route('application.create')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Regions</a>--}}
-{{--        </li>--}}
-
-
-
         <li class="mx-2 my-4 md:my-2">
             <a href="/contact" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Contact</a>
         </li>
