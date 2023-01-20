@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\HasOne;
@@ -67,6 +68,7 @@ class User extends Resource
 
             \Laravel\Nova\Fields\Image::make('Identity Document', 'id_img_path'),
             \Laravel\Nova\Fields\Image::make('User Selfie', 'selfie_path'),
+            Boolean::make('Admin', 'is_admin'),
             HasMany::make('Listings'),
             HasOne::make('Profile'),
         ];
