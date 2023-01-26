@@ -7,6 +7,7 @@
             <h3 class="font-semibold text-xl tracking-tight text-white">{{$latest->title}}</h3>
             <div class="items-center justify-between">
                 <br>
+                <p class="text-sm my-1 text-white"><strong>Images: </strong>{{ucfirst(trans($latest->images->count()))}}</p>
                 <p class="text-sm my-1 text-white"><strong>Condition: </strong>{{ucfirst(trans($latest->condition))}}</p>
                 <p class="text-sm my-1 text-white"><strong>Created: </strong>{{$latest->created_at->diffForHumans()}}</p>
                 <span class="text-3xl font-bold text-white">R{{ number_format($latest->price, 2, ',', ' ') }}</span>

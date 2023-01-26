@@ -68,6 +68,7 @@ class User extends Resource
 
             \Laravel\Nova\Fields\Image::make('Identity Document', 'id_img_path'),
             \Laravel\Nova\Fields\Image::make('User Selfie', 'selfie_path'),
+            Boolean::make('Verified', 'verified'),
             Boolean::make('Admin', 'is_admin'),
             HasMany::make('Listings'),
             HasOne::make('Profile'),

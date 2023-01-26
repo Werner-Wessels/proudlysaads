@@ -32,7 +32,7 @@
 
 <section class="m-16 rounded p-16 bg-white">
     <div>
-        <p class="text-xl text-center font-bold text-green-500">Do you have any other questions? We would love to assist! Please note that if you have submitted an application. Our response will most likely answer all your questions.</p>
+        <p class="text-xl text-center font-bold text-green-500">Do you have any other questions? We would love to assist!</p>
         <button class="m-5 bg-green-500 text-white rounded flex mx-auto justify-center">
             <a class="p-4" href="/contact">Contact Us Today!</a>
         </button>

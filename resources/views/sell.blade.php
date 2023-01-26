@@ -1,6 +1,14 @@
 @include('layout.main')
 
 <section class="bg-gray-900">
+    @if(\Illuminate\Support\Facades\Auth::user()->verified === 0)
+        <div class="p-8 mt-12 text-2xl font-bold text-green-500 text-center">
+            <h1>Please note that your account has not yet been verified. Please click <a class="font-black underline text-amber-500" href="{{route('profile.show', \Illuminate\Support\Facades\Auth::id())}}">here</a> to edit your profile. Please ensure you have uploaded a clear copy of your South African ID and a Selfie to your profile or we will not be able to verify your account. </h1>
+            <br><br>
+            <h1>If you have already uploaded the documents and you have not yet been verified within a reasonable amount of time. Please contact us on
+                <a class="font-black underline text-amber-500" href="mailto:info@proudlysaads.co.za">info@proudlysaads.co.za</a> and we will assist.</h1>
+        </div>
+    @else
         <div class="flex pt-10 items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
             <div class="w-full">
                 @if ($errors->any())
@@ -84,6 +92,22 @@
                         </select>
                     </div>
 
+                    @if ($errors->any())
+                        <div class="err">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <div class="text-center p-4 mb-4 text-sm text-white bg-red-700 rounded-lg bg-red-700 text-white" role="alert">
+                                        <span class="font-medium">{{ $error }}</span>
+                                    </div>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if(session()->has('success'))
+                        <div class="text-center p-4 mb-4 text-sm text-white bg-green-700 rounded-lg bg-green-700 text-white">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
                     <button
                         class="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                         <span>Submit </span>
@@ -97,6 +121,7 @@
                 </form>
             </div>
         </div>
+    @endif
     </div>
 </section>
 
