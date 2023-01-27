@@ -17,7 +17,7 @@
     </div>
 @endif
 
-<div class="flex justify-content-center justify-center mx-auto">
+<div class="">
     <main class="p-8 justify-center align-middle content-center">
 
     <!-- This is an example component -->
@@ -31,9 +31,9 @@
                             @endisset
 
                         <div class="px-5 pb-5">
-                                <h3 class="font-semibold text-xl tracking-tight text-white">{{$listing->title}}</h3>
+                                <h3 class="font-bold text-2xl tracking-tight text-white">{{$listing->title}}</h3>
                             <div class="items-center justify-between">
-                                <p class="text-xs my-1 text-white">{{$listing->description}} </p>
+                                <p class="text-xs my-1 text-white"><span class="font-bold text-md">Description: </span>{{$listing->description}} </p>
                                 <br>
                                 <p class="text-sm my-1 text-white"><strong>Condition: </strong>{{ucfirst(trans($listing->condition))}}</p>
                                 <p class="text-sm my-1 text-white"><strong>Created: </strong>{{$listing->created_at->diffForHumans()}}</p>
