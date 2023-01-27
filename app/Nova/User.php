@@ -47,7 +47,7 @@ class User extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->sortable()->hide(),
 
             Gravatar::make()->maxWidth(50),
 
@@ -69,7 +69,7 @@ class User extends Resource
             \Laravel\Nova\Fields\Image::make('Identity Document', 'id_img_path'),
             \Laravel\Nova\Fields\Image::make('User Selfie', 'selfie_path'),
             Boolean::make('Verified', 'verified'),
-            Boolean::make('Admin', 'is_admin'),
+            Boolean::make('Admin', 'is_admin')->hideFromIndex(),
             HasMany::make('Listings'),
             HasOne::make('Profile'),
         ];

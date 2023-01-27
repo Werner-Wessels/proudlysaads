@@ -67,10 +67,10 @@ class Listing extends Resource
             ID::make()->sortable()->hide(),
             BelongsTo::make('User')->hideWhenCreating()->hideWhenUpdating(),
             BelongsTo::make('Location')->hideWhenCreating()->hideWhenUpdating()->hideFromIndex()->display('name'),
-            BelongsTo::make('Category'),
+            BelongsTo::make('Category')->hideFromIndex(),
             Text::make('Title')->required(),
             Textarea::make('Description')->required(),
-            Currency::make('Price')->required(),
+            Currency::make('Price')->required()->hideFromIndex(),
             Select::make('Condition', 'condition')->required()->sortable()->options(
                 [
                     'New' => 'New',
@@ -78,15 +78,15 @@ class Listing extends Resource
                     'Used' => 'Used',
                     'Repairs Required' => 'Repairs Required'
                 ]
-            )->displayUsingLabels(),
+            )->displayUsingLabels()->hideFromIndex(),
             Boolean::make('Active', 'is_active')->hideWhenCreating(),
             Boolean::make('Approved', 'is_approved')->hideWhenCreating(),
             Boolean::make('Promoted', 'promoted'),
-            DateTime::make('Promoted On', 'promoted_at'),
-            DateTime::make('Promotion Expires On', 'promotion_expires_on'),
+            DateTime::make('Promoted On', 'promoted_at')->hideFromIndex(),
+            DateTime::make('Promotion Expires On', 'promotion_expires_on')->hideFromIndex(),
             Select::make('Location', 'location_id')->options(function () {
                 return array_filter(Location::pluck('name', 'id')->toArray());
-            })->displayUsingLabels(),
+            })->displayUsingLabels()->hideFromIndex(),
             HasMany::make('Images'),
 
 
