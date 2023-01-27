@@ -27,7 +27,7 @@ Route::get('/', function () {
 Route::resource('listings', \App\Http\Controllers\ListingController::class);
 Route::resource('categories', \App\Http\Controllers\CategoryController::class);
 Route::resource('location', \App\Http\Controllers\LocationController::class);
-Route::resource('profile', \App\Http\Controllers\ProfileController::class);
+Route::resource('profile', \App\Http\Controllers\ProfileController::class)middleware('auth');
 Route::resource('application', \App\Http\Controllers\ApplicationController::class);
 Route::resource('offer', \App\Http\Controllers\OfferController::class);
 
