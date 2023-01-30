@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
@@ -16,6 +17,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function boot()
     {
         parent::boot();
+        Nova::footer(function ($request) {
+            return Blade::render('
+                <a class="flex mx-auto justify-items-center justify-center text-green-500 text-xl text-center"href="/">Go To Home Page</a>
+        ');
+        });
     }
 
     /**
