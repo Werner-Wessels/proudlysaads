@@ -56,7 +56,7 @@
                         bg-gray-600 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
 
                             <option value="New" @if (old('condition') == 'New') selected="selected" @endif>New</option>
-                            <option value="Almost New" @if (old('condition') == 'Almost New') selected="selected" @endif>Almost Mew</option>
+                            <option value="Almost New" @if (old('condition') == 'Almost New') selected="selected" @endif>Almost New</option>
                             <option value="Used" @if (old('condition') == 'Used') selected="selected" @endif>Used</option>
                             <option value="Repairs Required" @if (old('condition') == 'Repairs Required') selected="selected" @endif>Repairs Required</option>
                         </select>
