@@ -41,19 +41,19 @@
                     @csrf
                     <div>
                         <label for="title" class="block mb-2 text-sm text-gray-200 text-gray-200">Name of Item</label>
-                        <input value="{{old('title')}}" type="text" id="title" name="title" placeholder="The name of your item" class="block w-full px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <input value="{{old('title')}}" type="text" id="title" name="title" placeholder="The name of your item" class="block w-full px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
                     <div>
                         <label for="description" class="block mb-2 text-sm text-gray-200 text-gray-200">Description</label>
-                        <textarea class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="description" id="description" cols="50" rows="4">{{ old('description') }}</textarea>
+                        <textarea class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="description" id="description" cols="50" rows="4">{{ old('description') }}</textarea>
 
                     </div>
 
                     <div>
                         <label for="condition" class="block mb-2 text-sm text-gray-200 text-gray-200">Condition</label>
-                        <select value="{{old('condition')}}" name="condition" id="condition"  required class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600
-                        bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+                        <select value="{{old('condition')}}" name="condition" id="condition"  required class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 border border-gray-200 rounded-md placeholder-gray-600
+                        bg-gray-600 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
 
                             <option value="New" @if (old('condition') == 'New') selected="selected" @endif>New</option>
                             <option value="Almost New" @if (old('condition') == 'Almost New') selected="selected" @endif>Almost Mew</option>
@@ -71,21 +71,23 @@
 
                     <div>
                         <label for="price" class="block mb-2 text-sm text-gray-200 text-gray-200">Price (R)</label>
-                        <input type="number" value="{{old('price')}}" name="price" id="price" min="0" step="0.01" placeholder="1000.00" class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <input type="number" value="{{old('price')}}" name="price" id="price" min="0" step="0.01" placeholder="1000.00" class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
 
-                    <div>
-                        <label class="block mb-2 text-sm text-gray-200 text-gray-200">Category</label>
-                        <select name="category_id" id="category_id" class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
-                            @foreach($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
-                            @endforeach
-                        </select>
+                    <div class="hidden">
+                        <label for="title" class="block mb-2 text-sm text-gray-200 text-gray-200">Category</label>
+                        <input value="{{$category->id}}" type="text" id="category_id" name="category_id"  class="block w-full px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
+
+                    @isset($subcategory)
+                        <div class="hidden"><label for="subcategory_id"> Subcategory</label>
+                            <input type="text"  value="{{$subcategory->id}}" name="subcategory_id" id="subcategory_id">
+                        </div>
+                    @endisset
 
                     <div>
                         <label class="block mb-2 text-sm text-gray-200 text-gray-200">Location</label>
-                        <select name="location_id" id="location_id" class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+                        <select name="location_id" id="location_id" class="block w-full px-5 py-3 mt-2 text-white placeholder-gray-400 border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
                             @foreach($locations as $location)
                                 <option value="{{$location->id}}">{{$location->name}}</option>
                             @endforeach

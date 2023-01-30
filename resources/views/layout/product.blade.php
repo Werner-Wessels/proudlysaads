@@ -16,6 +16,9 @@
                         <div class="">
                             <a class="text-[8px]  rounded-full bg-black p-2 font-bold text-white" href="{{route('categories.show', $listing->category->id)}}">{{$listing->category->name}}</a>
                             <a class=" text-[8px] no-wrap rounded-full bg-black p-2 font-bold text-white" href="{{route('location.show', $listing->location->id)}}">{{$listing->location->name}}</a>
+                            @isset($listing->subcategory)
+                                <a class=" text-[8px] no-wrap rounded-full bg-black p-2 font-bold text-white" href="{{route('subcategory.show', $listing->subcategory->id)}}">{{$listing->subcategory->name}}</a>
+                            @endisset
                         </div>
                     </div>
                 </div>->

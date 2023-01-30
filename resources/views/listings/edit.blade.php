@@ -22,7 +22,7 @@
                 We see you are looking to make some changes to your listing.
             </h1>
             <p class="mt-4 text-gray-500 text-gray-200">
-                Please note that your Branch Principal will be notified of these changes and might need to be verified.
+                Please note that our Proudly SA Staff will be notified of these changes and your listing might need to be verified again.
             </p>
             <form action="{{route('listings.update', $listing->id)}}" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-1" method="post" enctype="multipart/form-data">
 

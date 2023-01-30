@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Listing;
+use App\Models\Location;
 use App\Models\subCategory;
 use App\Http\Requests\StoresubCategoryRequest;
 use App\Http\Requests\UpdatesubCategoryRequest;
@@ -45,9 +48,21 @@ class SubCategoryController extends Controller
      * @param  \App\Models\subCategory  $subCategory
      * @return \Illuminate\Http\Response
      */
-    public function show(subCategory $subCategory)
+    public function show($id)
     {
-        //
+        $subcategory = subCategory::all()->where('id', '=', $id)->firstOrFail();
+        $listings = Listing::all()
+            ->where('subcategory_id', '=', $id)
+            ->where('is_active', '=', true)
+            ->where('is_approved','=',true );
+
+        return view('subCategory.show', [
+            'subcategory' => $subcategory,
+            'listings' => $listings,
+            'categories' => Category::all(),
+            'locations' => Location::all(),
+
+        ]);
     }
 
     /**

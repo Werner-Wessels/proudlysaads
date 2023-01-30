@@ -9,7 +9,7 @@
             <div class="flex mt-10 items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
                 <div class="w-full">
                     <p class="text-md font-semibold tracking-wider capitalize text-white">
-                        All of the below listings have been verified by our profession Proudly SA Ads staff for your peace of mind.
+                        All of the below listings have been verified by our professional Proudly SA Ads staff for your peace of mind.
                     </p>
                     <hr class="py-2">
                     <h1 class="text-2xl font-semibold tracking-wider capitalize text-white">

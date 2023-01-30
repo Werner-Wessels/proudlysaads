@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'listings' => Listing::orderby('created_at', 'DESC')->with('category', 'location')->where([['is_approved', '=', true],['is_active','=',true],['promoted','=',true]])->take(5)->get(),
+            'listings' => Listing::orderby('created_at', 'DESC')->with('category', 'subcategory','location')->where([['is_approved', '=', true],['is_active','=',true],['promoted','=',true]])->take(5)->get(),
             'categories' => Category::all(),
             'latestListings' => Listing::orderBy('created_at', 'DESC')->with('category', 'location', 'images')->where([['is_approved', '=', true],['is_active','=',true]])->take(5)->get(),
         ]);

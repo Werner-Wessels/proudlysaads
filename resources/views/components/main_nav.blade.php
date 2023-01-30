@@ -18,7 +18,7 @@
             <a href="/" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Home</a>
         </li>
         <li class="mx-2 my-4 md:my-2">
-            <a href="{{route('listings.create')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Sell</a>
+            <a href="{{route('selectCategory')}}" class="text-lg hover:text-white text-green-500 hover:bg-green-500 p-2 rounded-lg duration-500">Sell</a>
         </li>
 
         <li class="mx-2 my-4 md:my-2">

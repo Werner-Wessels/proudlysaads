@@ -32,7 +32,10 @@ Route::resource('application', \App\Http\Controllers\ApplicationController::clas
 Route::resource('offer', \App\Http\Controllers\OfferController::class);
 
 Route::post('listing/{email}', [EmailSellerController::class, 'email'])->name('email');
-
+Route::get('listing/category_select', [\App\Http\Controllers\ListingController::class, 'selectCategory'])->name('selectCategory')->middleware('auth');
+Route::get('listing/subcategory_select/{category}', [\App\Http\Controllers\ListingController::class, 'selectSubCategory'])->name('selectSubCategory')->middleware('auth');
+Route::get('listing/sell/{subcategory}', [\App\Http\Controllers\ListingController::class, 'sellForm'])->name('showSellForm')->middleware('auth');
+Route::get('subcategory/{id}', [\App\Http\Controllers\SubCategoryController::class, 'show'])->name('subcategory.show');
 Route::get('/promote/{id}', [\App\Http\Controllers\PromoteController::class, 'create'])->name('promote.create')->middleware('auth');
 
 Route::get('/about', function () {

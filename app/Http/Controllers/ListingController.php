@@ -8,6 +8,7 @@ use App\Models\Image;
 use App\Models\Listing;
 use App\Models\Location;
 use App\Models\Profile;
+use App\Models\subCategory;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,41 @@ class ListingController extends Controller
         ]);
     }
 
+    public function selectCategory(){
+        return view('categories.index', [
+            'categories' => Category::all(),
+        ]);
+    }
+
+    public function selectSubCategory($id){
+        $category = Category::where('id', '=', $id)->first();
+        $subCategories = subCategory::all()->where('category_id', '=', $category->id);
+
+        if (count($subCategories)){
+            return view('subcategory.index', [
+                'subCategories' => $subCategories,
+                'category' => $category
+            ]);
+        }
+        else{
+            return view('sell',[
+                'category' => $category,
+                'locations' => Location::all(),
+            ]);
+        }
+    }
+
+    public function sellForm($subcategory){
+
+        $subcategory = subCategory::all()->where('id','=', $subcategory)->firstOrFail();
+        $category = category::all()->where('id','=', $subcategory->category->id)->firstOrFail();
+
+        return view('sell',[
+            'category' => $category,
+            'subcategory' => $subcategory,
+            'locations' => Location::all(),
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -60,7 +96,8 @@ class ListingController extends Controller
            'description' => 'required|string|max:855',
            'condition' => 'required|string',
            'price' => 'required',
-           'category_id' => 'required',
+           'category_id' => 'integer | required',
+           'subcategory_id' => 'integer',
            'location_id' => 'required'
         ]);
 
@@ -70,6 +107,7 @@ class ListingController extends Controller
       $listing->condition = $request->condition;
       $listing->price = $request->price;
       $listing->category_id = $request->category_id;
+      $listing->subcategory_id = $request->subcategory_id;
       $listing->location_id = $request->location_id;
       $listing->save();
         foreach ($request->file('images') as $imagefile) {
