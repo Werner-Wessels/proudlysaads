@@ -12,7 +12,7 @@
 @endforeach
 <div class="">
     <div class="flex mx-auto flex-col justify-center justify-items-center text-center max-w-2xl">
-        <a class="" href="{{back()}}"><p class="text-white rounded-full px-4 py-2 m-4 bg-gray-500">Return To Previous Page</p></a>
+        <a class="" href="{{url()->previous()}}"><p class="text-white rounded-full px-4 py-2 m-4 bg-gray-500">Return To Previous Page</p></a>
     </div>
 </div>
 <x-layout.footer/>
