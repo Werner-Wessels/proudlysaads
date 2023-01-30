@@ -44,7 +44,7 @@ class ListingController extends Controller
         $subCategories = subCategory::all()->where('category_id', '=', $category->id);
 
         if (count($subCategories)){
-            return view('subcategory.index', [
+            return view('subCategory.index', [
                 'subCategories' => $subCategories,
                 'category' => $category
             ]);
