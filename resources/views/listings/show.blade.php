@@ -41,6 +41,9 @@
                             </div>
                             <div class="my-4">
                                 <div class="justify-start mb-8 mt-8">
+                                    <a class="p-2 text-2xl justify-self-start text-white bg-green-500 font-bold ring-4 ring-green-500 font-medium rounded-lg text-sm text-center break-normal" href="#contact">Contact Seller</a>
+                                </div>
+                                <div class="justify-start mb-8 mt-8">
                                     <a class="p-2 text-2xl justify-self-start text-white bg-green-500 font-bold ring-4 ring-green-500 font-medium rounded-lg text-sm text-center break-normal" href="{{ url()->previous() }}">Go Back</a>
                                 </div>
                             </div>
@@ -88,7 +91,7 @@
 
         <div>
             <div class="mt-12 px-5 justify-content-center text-center p-8 bg-green-500">
-                <h1 class="mt-4 text-xl mb-8 font-bold text-white">Contact the Seller</h1>
+                <h1 class="mt-4 text-xl mb-8 font-bold text-white" id="contact">Contact the Seller</h1>
                 <div class="grid">
                     <form method="POST" action="{{route('email', $listing->user->email)}}">
                         @csrf
