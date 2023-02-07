@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactUsFormController;
 use App\Http\Controllers\EmailSellerController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +46,10 @@ Route::get('/about', function () {
 Route::get('/apply', function () {
     return view('apply');
 })->name('apply');
+
+Route::get('/pay', [PaymentController::class, 'initiate']);
+Route::post('/notify', [PaymentController::class, 'notify'])->name('payment_notify');
+Route::post('/paygate/response', [PaymentController::class, 'pg_response'])->name('payment_response');
 
 Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.create');
 Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
