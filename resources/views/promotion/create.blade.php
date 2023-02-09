@@ -14,8 +14,8 @@
                 </ul>
             </div>
             <div class=" grid text-white justify-content-center justify-center text-center">
-                <a href="/"><p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 3 days @ R50,00</p></a>
-                <a href="/"><p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 7 days @ R100,00</p></a>
+                <a href="/"><p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 3 days @ R75,00</p></a>
+                <a href="/"><p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 7 days @ R150,00</p></a>
             </div>
 
             <div class="text-white text-2xl">
