@@ -7,8 +7,8 @@
             <br>
             <div class=" grid text-white justify-content-center justify-center text-center">
                 <p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Free Ads</p>
-                <p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 3 days @ R50,00</p>
-                <p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 7 days @ R100,00</p>
+                <p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 3 days @ R75,00</p>
+                <p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 7 days @ R150,00</p>
             </div>
 
             <div class="text-white text-2xl">
