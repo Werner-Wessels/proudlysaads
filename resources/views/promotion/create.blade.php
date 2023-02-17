@@ -20,7 +20,7 @@
 
             <div class="text-white">
                 <h3 class=" text-2xl">Banking Details:</h3>
-                <p>Account Holder: PJ du Plessis</p>
+                <p>Account Holder: Proudly SA Ads</p>
                 <p>Banking Name: Capitec Bank</p>
                 <p>Acount Number: 133 538 7569</p>
                 <p>Branch Code: 470010</p>
