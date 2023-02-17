@@ -7,8 +7,8 @@ use App\Models\Listing;
 use App\Models\Offer;
 use App\Models\Profile;
 use App\Models\User;
-use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
@@ -92,25 +92,30 @@ class ProfileController extends Controller
         $validated=$request->validate(
             [
                 'contact_number' => 'required',
-                'address1' => 'required|string',
-                'address2' => 'required|string',
-                'city' => 'required|string',
+//                'address1' => 'required|string',
+//                'address2' => 'required|string',
+//                'city' => 'required|string',
                 'province' => 'required|string',
             ]
         );
         $profile = Profile::find($id);
         $profile->contact_number = $request->get('contact_number');
-        $profile->address1 = $request->get('address1');
-        $profile->address2 = $request->get('address2');
-        $profile->city = $request->get('city');
+        $profile->address1 = "$request->get('address1')";
+        $profile->address2 = "$request->get('address2')";
+        $profile->city = "$request->get('city')";
         $profile->province = $request->get('province');
         $profile->save();
 
         $user = $profile->user;
-        $id_img_path = $request;
-        $user->id_img_path = $request->file('id_copy')->store('storage', ['disk' => 'my_files']);
-        $user->selfie_path = $request->file('selfie')->store('storage', ['disk' => 'my_files']);
-        $user->save();
+        \Illuminate\Support\Facades\Auth::user()->verified = 1;
+
+        Auth::user()->save();
+
+
+//        $id_img_path = $request;
+//        $user->id_img_path = $request->file('id_copy')->store('storage', ['disk' => 'my_files']);
+//        $user->selfie_path = $request->file('selfie')->store('storage', ['disk' => 'my_files']);
+//        $user->save();
 
         return redirect()->back()->with('success', 'Profile updated, thank you.');
     }

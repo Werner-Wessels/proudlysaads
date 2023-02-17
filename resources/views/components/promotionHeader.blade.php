@@ -13,12 +13,12 @@
 
             <div class="text-white text-2xl">
                 <ul>
-                    <li class="m-4 font-bold">Free Ads gives you full functionality of the Proudly SA Ads Platform</li>
+                    <li class="m-4 font-bold">Free Ads are still listed on the Proudly SA Ads Platform</li>
                     <li class="m-4 font-bold">Promoted Ads will be promoted live on TikTok, Stream Bean Radio and other Social Media Platforms</li>
                 </ul>
 
                 @if(Auth::check())
-                    <a href="{{route('profile.show', Auth::user()->id)}}">
+                    <a href="{{route('profile.show', Auth::user()->id).'#listing'}}">
                         <li class="flex mx-auto p-4 text-center justify-center rounded gap-x-2 gap-y-2 mb-2 bg-green-500">Promote your Ads Now!</li>
                     </a>
                     @endif

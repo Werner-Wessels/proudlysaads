@@ -38,7 +38,7 @@
             <button class="flex text-center items-center align-middle justify-center mx-auto rounded bg-green-500 m-4 p-2 font-bold text-md text-white"><a href="{{route('profile.edit', $user->id)}}">Edit Profile</a></button>
         </div>
 
-        <h1 class="mx-4 my-8 sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-2xl text-center text-white">Your <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 from-green-400 to-green-500">Listings</span></h1>
+        <h1 id="listing" class="mx-4 my-8 sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-2xl text-center text-white">Your <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500 from-green-400 to-green-500">Listings</span></h1>
         <div>
             <div class="bg-gray-800 border rounded-2xl p-4">
                 <table class="mx-auto justify-center">

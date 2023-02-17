@@ -80,12 +80,12 @@
 
 <section class="m-4 rounded p-16 bg-white">
     <div>
-        <p class="text-xl text-center font-bold text-green-500">Do you wish to speak to us in person. Give us a call or contact us on WhatsApp!</p>
+        <p class="text-xl text-center font-bold text-green-500">Do you wish to speak to us in person. Contact us on WhatsApp!</p>
         <button class="m-5 bg-green-500 text-white rounded flex mx-auto justify-center">
-            <a class="p-4" href="tel:0842320209">Minky Rossouw: <br>084 252 0209</a>
+            <a class="p-4" href="https://wa.me/27813762954">Chat with Paul du Plessis: <br>081 376 2954</a>
         </button>
         <button class="m-5 bg-green-500 text-white rounded flex mx-auto justify-center">
-            <a class="p-4" href="tel:0813762954">Paul du Plessis: <br>081 376 2954</a>
+            <a class="p-4" href="https://wa.me/27684372772">Chat with Minky Rossouw: <br>068 437 2772</a>
         </button>
     </div>
 </section>

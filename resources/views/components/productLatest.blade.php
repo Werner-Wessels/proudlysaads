@@ -1,5 +1,6 @@
 <a href="{{route('listings.show', $latest->id)}}">
-    <div class="h-[500px] w-[350px] shadow-md rounded-lg max-w-xs @if($latest->promoted) border-[10px] border-green-500 @else border-[10px] border-gray-500 @endif ">
+    <div class="h-[500px]  shadow-md rounded-lg max-w-xs @if($latest->promoted) w-[350px] border-[10px] border-green-500 @else w-[200px] border-[10px] border-gray-500 @endif ">
+        @if($latest->promoted) <h3 class="text-white text-center bg-green-500">Promoted</h3> @endif
         @isset($latest->images[0]->img_path)
             <img class="flex mx-auto justify-content-center justify-center rounded-t-lg p-8 max-h-[200px]"  src="{{ URL::asset('/storage/'.$latest->images[0]->img_path) }}" alt="product image">
         @endisset
@@ -10,7 +11,7 @@
                 <p class="text-sm my-1 text-white"><strong>Images: </strong>{{ucfirst(trans($latest->images->count()))}}</p>
                 <p class="text-sm my-1 text-white"><strong>Condition: </strong>{{ucfirst(trans($latest->condition))}}</p>
                 <p class="text-sm my-1 text-white"><strong>Created: </strong>{{$latest->created_at->diffForHumans()}}</p>
-                <span class="text-3xl font-bold text-white">R{{ number_format($latest->price, 2, ',', ' ') }}</span>
+                <span class="@if($latest->promoted)text-3xl @else text-lg @endif font-bold text-white">R{{ number_format($latest->price, 2, ',', ' ') }}</span>
             </div>
             <div class="my-4">
                 <div class="">

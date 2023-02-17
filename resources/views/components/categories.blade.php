@@ -7,11 +7,17 @@
             <br>
             <div class="md:columns-5 justify-center justify-content-center text-center">
                 @foreach($categories as $category)
+                    @if($category->featured)
                     <a href="{{route('categories.show', $category->id)}}">
                         <li class="flex mx-auto p-4 text-center justify-center rounded gap-x-2 gap-y-2 mb-2 bg-green-500">{{$category->name}}</li>
                     </a>
+                    @endif
                 @endforeach
+
             </div>
+            <a href="{{route('categories.index')}}">
+                <li class="flex mt-4 mx-auto p-4 text-center justify-center max-w-xs rounded gap-x-2 gap-y-2 mb-2 bg-gray-500 border border-green-500">View All</li>
+            </a>
             <br>
         </div>
     </div>

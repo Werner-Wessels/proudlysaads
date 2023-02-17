@@ -1,9 +1,5 @@
 <footer {{ $attributes->class(['bg-gradient-to-r']) }}>
 
-    <div class="m-12 grid justify-center bg-white p-8 rounded">
-        <h1 class="text-green-500 text-center text-xl font-bold">We accept the below payments:</h1>
-        <img src="{{ URL::asset('/storage/paygate.png') }}" alt="">
-    </div>
     <div class="md:max-w-screen-xl px-4 py-16 md:mx-auto sm:px-6 lg:px-8">
         <div class="md:grid grid-cols-4 gap-8 lg:grid-cols-3">
 

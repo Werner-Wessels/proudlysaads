@@ -14,8 +14,19 @@
                 </ul>
             </div>
             <div class=" grid text-white justify-content-center justify-center text-center">
-                <a href="/"><p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 3 days @ R75,00</p></a>
-                <a href="/"><p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 7 days @ R150,00</p></a>
+                <p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 3 days @ R75,00</p>
+                <p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Promote for 7 days @ R150,00</p>
+            </div>
+
+            <div class="text-white">
+                <h3 class=" text-2xl">Banking Details:</h3>
+                <p>Account Holder: PJ du Plessis</p>
+                <p>Banking Name: Capitec Bank</p>
+                <p>Acount Number: 133 538 7569</p>
+                <p>Branch Code: 470010</p>
+                <p>Reference Number: Your Email Address</p>
+                <br>
+                <p class="font-bold">Please send proof of payment to the following email address: <a href="mailto:info@proudlysaads.co.za">info@proudlysaads.co.za</a></p>
             </div>
 
             <div class="text-white text-2xl">

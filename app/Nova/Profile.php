@@ -70,10 +70,10 @@ class Profile extends Resource
     protected function addressFields()
     {
         return $this->merge([
-            Place::make('Address', 'address1')->countries(['ZA'])->hideFromIndex(),
-            Text::make('Address Line 2', 'address2')->hideFromIndex(),
-            Text::make('City')->hideFromIndex()->sortable(),
-            Text::make('Province')->hideFromIndex()->sortable(),
+//            Place::make('Address', 'address1')->countries(['ZA'])->hideFromIndex(),
+//            Text::make('Address Line 2', 'address2')->hideFromIndex(),
+//            Text::make('City')->hideFromIndex()->sortable(),
+            Text::make('Area', 'province')->hideFromIndex()->sortable(),
 
         ]);
     }

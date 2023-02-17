@@ -26,11 +26,7 @@
                 The below information is extremely important to us. We will not only keep it private, but also require this information to get in touch with you. Because human contact is an integral part of Proudly SA Ads please keep these details up to date.
             </p>
 
-
-
-
-
-            <form action="{{route('profile.update', $user->profile->id)}}" method="POST" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-1" enctype="multipart/form-data">
+            <form action="{{route('profile.update', \Illuminate\Support\Facades\Auth::user()->profile->id)}}" method="POST" class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-1" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="_method" value="PUT">
                 <div>
@@ -50,45 +46,45 @@
                         " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
 
-                <div>
-                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Address Line 1</label>
-                    <input  required type="text" id="address1" name="address1" placeholder="Street Address" value="@isset($user->profile->address1) {{$user->profile->address1}} @endisset
-                        " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                </div>
+{{--                <div>--}}
+{{--                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Address Line 1</label>--}}
+{{--                    <input  required type="text" id="address1" name="address1" placeholder="Street Address" value="@isset($user->profile->address1) {{$user->profile->address1}} @endisset--}}
+{{--                        " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />--}}
+{{--                </div>--}}
+
+{{--                <div>--}}
+{{--                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Address Line 2</label>--}}
+{{--                    <input  required type="text" id="address2" name="address2" placeholder="Town / Complex / Apartment" value="@isset($user->profile->address2) {{$user->profile->address2}}--}}
+{{--                        @endisset--}}
+{{--                        " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />--}}
+{{--                </div>--}}
+
+{{--                <div>--}}
+{{--                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">City</label>--}}
+{{--                    <input  required type="text" id="city" name="city" placeholder="Your City" value="@isset($user->profile->city) {{$user->profile->city}}--}}
+{{--                        @endisset--}}
+{{--                        " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />--}}
+{{--                </div>--}}
 
                 <div>
-                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Address Line 2</label>
-                    <input  required type="text" id="address2" name="address2" placeholder="Town / Complex / Apartment" value="@isset($user->profile->address2) {{$user->profile->address2}}
+                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Area</label>
+                    <input  required type="text" id="province" name="province" placeholder="The area you reside in" value="@isset($user->profile->province) {{$user->profile->province}}
                         @endisset
                         " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
 
-                <div>
-                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">City</label>
-                    <input  required type="text" id="city" name="city" placeholder="Your City" value="@isset($user->profile->city) {{$user->profile->city}}
-                        @endisset
-                        " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                </div>
+{{--                <div>--}}
+{{--                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Copy of South African ID</label>--}}
+{{--                    <input  required type="file" id="id_copy" name="id_copy" placeholder="Your Province" value="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />--}}
+{{--                </div>--}}
 
-                <div>
-                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Province</label>
-                    <input  required type="text" id="province" name="province" placeholder="Your Province" value="@isset($user->profile->province) {{$user->profile->province}}
-                        @endisset
-                        " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                </div>
-
-                <div>
-                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Copy of South African ID</label>
-                    <input  required type="file" id="id_copy" name="id_copy" placeholder="Your Province" value="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                </div>
-
-                <div>
-                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Selfie for comparison with SA Identity Document</label>
-                    <input  required type="file" id="selfie" name="selfie" placeholder="Your Province" value="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                </div>
+{{--                <div>--}}
+{{--                    <label class="block mb-2 text-sm text-gray-200 text-gray-200">Selfie for comparison with SA Identity Document</label>--}}
+{{--                    <input  required type="file" id="selfie" name="selfie" placeholder="Your Province" value="" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />--}}
+{{--                </div>--}}
 
 
-                <p class="text-white justify-center"><small>By updating your profile and submitting the above documentation for verification, you give Proudly SA Ads the permission to pass these details onto the relevant parties if there is any failure to comply with Proudly South African Ads' Terms and Conditions</small></p>
+                <p class="text-white justify-center"><small>By updating your profile, you give Proudly SA Ads the permission to pass these details onto the relevant parties if there is any failure to comply with Proudly South African Ads's Terms and Conditions</small></p>
                 <button
                     class="flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                     <span>Submit </span>
