@@ -93,7 +93,7 @@
                     @empty
                         <div class="text-center items-center justify-center">
                             <p class="p-2 sm:mx-auto sm:w-10/12 md:w-2/3 text-lg text-center lg:w-auto text-white">You do not have any listings!</p>
-                            <button class="rounded bg-green-500 m-4 p-2 font-bold text-md text-white"><a href="{{route('listings.create')}}">Start Selling Now!</a></button>
+                            <button class="rounded bg-green-500 m-4 p-2 font-bold text-md text-white"><a href="{{route('selectCategory')}}">Start Selling Now!</a></button>
                         </div>
                     @endforelse
                 </table>
