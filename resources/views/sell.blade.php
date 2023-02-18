@@ -3,10 +3,8 @@
 <section class="bg-gray-900">
     @if(\Illuminate\Support\Facades\Auth::user()->verified === 0)
         <div class="p-8 mt-12 text-2xl font-bold text-green-500 text-center">
-            <h1>Please note that your account has not yet been verified. Please click <a class="font-black underline text-amber-500" href="{{route('profile.show', \Illuminate\Support\Facades\Auth::id())}}">here</a> to edit your profile. Please ensure you have uploaded a clear copy of your South African ID and a Selfie to your profile or we will not be able to verify your account. </h1>
+            <h1>Please note that your account has not yet been verified. Please click <a class="font-black underline text-amber-500" href="{{route('profile.edit', \Illuminate\Support\Facades\Auth::id())}}">here</a> to edit your profile. </h1>
             <br><br>
-            <h1>If you have already uploaded the documents and you have not yet been verified within a reasonable amount of time. Please contact us on
-                <a class="font-black underline text-amber-500" href="mailto:info@proudlysaads.co.za">info@proudlysaads.co.za</a> and we will assist.</h1>
         </div>
     @else
         <div class="flex pt-10 items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">

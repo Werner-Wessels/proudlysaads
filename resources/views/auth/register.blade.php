@@ -17,7 +17,7 @@
                         <div class="col-md-6">
                             <input type="text" id="name" placeholder="Your Name and Surname" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="name" required autofocus>
                             @if ($errors->has('name'))
-                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                                <span class="text-red-500">{{ $errors->first('name') }}</span>
                             @endif
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                         <label class="block mb-2 text-sm text-gray-400 text-gray-200">Email Address</label>
                             <input type="text" placeholder="example@example.com" id="email_address" class="form-block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="email" required autofocus>
                             @if ($errors->has('email'))
-                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                                <span class="text-red-500">{{ $errors->first('email') }}</span>
                             @endif
 
                     </div>
@@ -36,7 +36,7 @@
                         <div class="col-md-6">
                             <input type="password" placeholder="Password" id="password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" name="password" required>
                             @if ($errors->has('password'))
-                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                                <span class="text-red-500">{{ $errors->first('password') }}</span>
                             @endif
                         </div>
                     </div>

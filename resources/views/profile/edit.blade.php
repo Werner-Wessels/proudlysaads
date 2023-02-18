@@ -41,9 +41,8 @@
 
                 <div>
                     <label class="block mb-2 text-sm text-gray-200 text-gray-200">Contact Number</label>
-                    <input  required type="text" id="contact_number" name="contact_number" placeholder="Your Contact Number" value="@isset($user->profile->contact_number) {{$user->profile->contact_number}}
-                        @endisset
-                        " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    <input  required type="text" id="contact_number" name="contact_number" placeholder="Your Contact Number(Example:0821234567)"
+                         class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
 
 {{--                <div>--}}
@@ -68,9 +67,8 @@
 
                 <div>
                     <label class="block mb-2 text-sm text-gray-200 text-gray-200">Area</label>
-                    <input  required type="text" id="province" name="province" placeholder="The area you reside in" value="@isset($user->profile->province) {{$user->profile->province}}
-                        @endisset
-                        " class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    <input  required type="text" id="province" name="province" placeholder="The area you reside in"
+                         class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md placeholder-gray-600 bg-gray-600 text-gray-300 border-gray-700 focus:border-blue-400 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
 
 {{--                <div>--}}
