@@ -25,6 +25,8 @@
                 <p>Acount Number: 133 538 7569</p>
                 <p>Branch Code: 470010</p>
                 <p>Reference Number: Your Email Address</p>
+                <p>Capitec Pay By Phone Number: 081 376 2954</p>
+
                 <br>
                 <p class="font-bold">Please send proof of payment to the following email address: <a href="mailto:info@proudlysaads.co.za">info@proudlysaads.co.za</a></p>
             </div>

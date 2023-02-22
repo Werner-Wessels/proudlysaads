@@ -24,8 +24,8 @@
 <div class="">
     <div class="px-6 md:px-12 lg:px-6">
         @include('components.topListings')
-        @include('components.noScams')
         @include('components.latestListings')
+        @include('components.noScams')
     </div>
 </div>
 
