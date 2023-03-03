@@ -26,7 +26,7 @@
             <span><p class="text-xl text-white">Click Play to Listen Live to <a class="underline text-green-500" href="https://streambeanradio.com/">Stream Bean Radio</a></p></span>
         </div>
         <p class="text-center mt-8 text-xs text-gray-200">
-            © 2023 Proudly SA Ads
+            © 2023 Proudly SA Ads - The most trusted selling platform in South Africa
         </p>
     </div>
 </footer>

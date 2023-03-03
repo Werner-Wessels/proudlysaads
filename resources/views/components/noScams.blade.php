@@ -21,10 +21,12 @@
 
         </a>
 
-
     </div>
 
 
     <p class="mt-10 sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-green-500 text-2xl text-center sm:text-5xl md:text-4xl lg:w-auto xl:text-4xl">Trust, Honesty and Integrity!</p>
-    <br><br>
+    <br>
+    <p class="text-green-500 text-2xl text-center">The most trusted selling platform in South Africa</p>
+    <br>
+    <br>
 </div>
