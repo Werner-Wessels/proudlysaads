@@ -41,7 +41,7 @@
 
     @vite('resources/css/app.css')
 
-    <title>Proudly SA Ads - The most trusted selling platform in South Africa</title>
+    <title>Proudly SA Ads - The most trusted selling platform.</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
