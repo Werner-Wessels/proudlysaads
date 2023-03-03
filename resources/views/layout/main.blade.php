@@ -3,20 +3,20 @@
 <head>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0C1PNCNH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+{{--    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0C1PNCNH"></script>--}}
+{{--    <script>--}}
+{{--        window.dataLayer = window.dataLayer || [];--}}
+{{--        function gtag(){dataLayer.push(arguments);}--}}
+{{--        gtag('js', new Date());--}}
 
-        gtag('config', 'G-PZ0C1PNCNH');
-    </script>
+{{--        gtag('config', 'G-PZ0C1PNCNH');--}}
+{{--    </script>--}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The most trusted selling platform in South Africa">
-    <script src="https://cdn.tailwindcss.com"></script>
+{{--    <script src="https://cdn.tailwindcss.com"></script>--}}
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+{{--    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>--}}
     <script>
         function Menu(e){
             let list = document.querySelector('ul');
