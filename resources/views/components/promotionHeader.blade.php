@@ -1,9 +1,9 @@
 <div class="bg-gray-700 m-10 rounded">
     <div class="p-8 mx-auto justify-content-center justify-center relative space-y-8 text-center">
         <div class="text-white">
-            <h1 class="text-center mb-4 sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-3xl lg:text-5xl text-center md:text-5xl lg:w-auto xl:text-5xl  text-green-500">Promote
+            <p class="text-center mb-4 sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-3xl lg:text-5xl text-center md:text-5xl lg:w-auto xl:text-5xl  text-green-500">Promote
                 <br><span class="text-green-500">Listings </span>
-            </h1>
+            </p>
             <br>
             <div class=" grid text-white justify-content-center justify-center text-center">
                 <p class="bg-green-500 p-4 max-w-sm m-4 rounded-lg">Free Ads</p>

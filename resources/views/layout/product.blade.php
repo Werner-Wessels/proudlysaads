@@ -2,10 +2,10 @@
     <div class=" m-6 gap-6 mx-auto">
         <a href="{{route('listings.show', $listing->id)}}">
             <div class=" rounded-lg max-w-sm @if($listing->promoted) border-[10px] border-green-500 h-[500px] w-[300px] @else border-[10px] border-gray-500 h-[500px] w-[200px] @endif ">
-                @if($listing->promoted)<h1 class="text-center bg-green-500 text-white font-bold py-2">Promoted</h1>@endif
+                @if($listing->promoted)<p class="text-center bg-green-500 text-white font-bold py-2">Promoted</p>@endif
                 @include('components.productImage')
                 <div class="px-5 pb-5">
-                    <h1 class="font-semibold text-xl tracking-tight text-white">{{$listing->title}}</h1>
+                    <p class="font-semibold text-xl tracking-tight text-white">{{$listing->title}}</p>
                     <div class="items-center justify-between">
                         <br>
                         <p class="text-sm my-1 text-white"><strong>Images: </strong>{{ucfirst(trans($listing->images->count()))}}</p>

@@ -1,7 +1,7 @@
 <div class="mt-12">
-    <h1 class="text-center mb-4 sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-3xl lg:text-5xl text-center md:text-5xl lg:w-auto xl:text-5xl  text-white">Our Latest
+    <p class="text-center mb-4 sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-3xl lg:text-5xl text-center md:text-5xl lg:w-auto xl:text-5xl  text-white">Our Latest
         <br><span class="text-green-500">Listings </span>
-    </h1>
+    </p>
     <div class=" grid mx-auto sm:columns-5">
         @forelse($latestListings as $latest)
             <div class="flex flex-wrap mx-auto">
