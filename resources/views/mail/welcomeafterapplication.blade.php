@@ -7,7 +7,7 @@
     <title>Welcome</title>
 </head>
 <body>
-<h3><strong>Congratulations {{$application->name}}:</strong></h3>
+<h1><strong>Congratulations {{$application->name}}:</strong></h1>
 <p>You have taken the first step to becoming self-reliant and owning your own business.</p>
 <p><strong>How easy was that?</strong></p>
 <p>We have received your details and we hope to welcome you into the Proudly SA Ads Family as a Branch Principal.</p>
@@ -19,9 +19,9 @@
 </p>
 <p><strong>Is it truly exclusive?</strong></p>
 <p>Yes, you and you alone will have control over the items being sold in your town or area.</p>
-<h4><strong>You will own your town.</strong></h4>
+<h1><strong>You will own your town.</strong></h1>
 <p>Yes, “own” is the correct word, once you have committed, you will be put in contact with all other Branch Principals nationwide, and our Head Office.</p>
-<h4><strong>Included in this Business Package:</strong></h4>
+<h1><strong>Included in this Business Package:</strong></h1>
 <ul>
     <li>Proudly SA Ads Training and Information Manual which Includes the following:
     <ul>
@@ -42,12 +42,12 @@
 <p><strong>What is the cost?</strong></p>
 
 <p>It’s simple, we require a once-off buying-in fee of a R1000.00. Immediately after we have received your payment you will be given access to the platform and all the other included benefits. A monthly concession fee of R300.00 will be payable towards Proudly SA Ads Head Office, for administration and marketing costs nationally.</p>
-<h3><strong>Note: </strong>If you commit now, your 1st monthly concession fee will only be due by the end of December 2022.</h3>
+<h1><strong>Note: </strong>If you commit now, your 1st monthly concession fee will only be due by the end of December 2022.</h1>
 
 <p><strong>Contract Term</strong></p>
 <p>Please note that you are not bound by a contract term under the Master Branch Principal Agreement. If for some reason, you wish to sell your Proudly SA Ads Branch you may do so at any time.</p>
-<h3>This is a limited time offer. Space is also limited because once we have sold a Proudly SA Ads Branch in your Town, then you are out of luck.</h3>
-<h3><strong>7 Days:</strong></h3>
+<h1>This is a limited time offer. Space is also limited because once we have sold a Proudly SA Ads Branch in your Town, then you are out of luck.</h1>
+<h1><strong>7 Days:</strong></h1>
 <ul>
     <li>To become your own boss.</li>
     <li>To own your local Proudly SA Ads Branch.</li>
@@ -59,7 +59,7 @@
 <p><strong>What should you do next?</strong></p>
 <p>All we require now is your buying-in fee. Once received, we will give you access to the Proudly SA Ads Platform and send you your Master Branch Principal Agreement and Non-disclosure Agreement with Proudly SA Ads Head Office. We will then provide you with all the information that is mentioned above in the business package. This will ensure that you are well-prepared to change your life forever.</p>
 
-<h3><strong>Don’t delay, act now and Own Your Town.</strong></h3>
+<h1><strong>Don’t delay, act now and Own Your Town.</strong></h1>
 <p><strong>Proudly SA Ads Banking Details:</strong></p>
 <ul>
     <li>Proudly SA Ads</li>
@@ -71,7 +71,7 @@
 <p>Email proof of payment to <a href="mailto:applications@proudlysaads.co.za">applications@proudlysaads.co.za</a></p>
 
 
-<h3>We cannot wait to welcome you to the Proudly SA Ads Family.</h3>
+<h1>We cannot wait to welcome you to the Proudly SA Ads Family.</h1>
 
 </body>
 </html>

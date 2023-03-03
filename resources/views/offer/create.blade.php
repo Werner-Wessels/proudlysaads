@@ -27,7 +27,7 @@
                     <div class="shadow-md rounded-lg max-w-sm bg-gray-800 border-gray-700">
                             <img class="rounded-t-lg p-8" src="{{ URL::asset('/storage/'.$listing->image_url) }}" alt="product image">
                         <div class="px-5 pb-5">
-                                <h3 class="font-semibold text-xl tracking-tight text-white">{{$listing->title}}</h3>
+                                <h1 class="font-semibold text-xl tracking-tight text-white">{{$listing->title}}</h1>
                             <div class="items-center justify-between">
                                 <p class="text-xs my-1 text-white">{{$listing->description}} </p>
                                 <br>

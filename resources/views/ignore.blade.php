@@ -1,9 +1,9 @@
-<h2>APPLICATION - VERIFICATION OF NATIONAL ENTRY</h2>
+<h1>APPLICATION - VERIFICATION OF NATIONAL ENTRY</h2>
 <br>
 
 <p>The entry verification should be completed per entry
 </p>
-<h3>Player Details Verification</h3>
+<h1>Player Details Verification</h1>
 <label style="font-weight: bold; font-size: 18px !important" > Name
     [text* your-name] </label>
 
@@ -59,7 +59,7 @@
 </ul>
 <br>
 <br>
-<h3>Player/Individual Sponsor Information Verification</h3>
+<h1>Player/Individual Sponsor Information Verification</h1>
 <p>Information details of the person responsible for payment of fees of the player (if applicable)
 </p>
 
@@ -77,21 +77,21 @@
 
 <br>
 <br>
-<h3>Seasonal Registration Fees Verification</h3>
-<h4>Federation Registration Fees per entry</h4>
+<h1>Seasonal Registration Fees Verification</h1>
+<h1>Federation Registration Fees per entry</h1>
 <label style="font-weight: bold; font-size: 18px !important" >Junior (R50) – U15 and U18 </label>[radio junior use_label_element default:1 "Yes" "No"]
 <label style="font-weight: bold; font-size: 18px !important" >Development (R150) </label>[radio dev use_label_element default:1 "Yes" "No"]
 <label style="font-weight: bold; font-size: 18px !important" >Mainstream (R300) – U23, Men, Women, Senior, Master, Grand Master  </label>[radio main use_label_element default:1 "Yes" "No"]
 <label style="font-weight: bold; font-size: 18px !important" >Social (R200)  </label>[radio social use_label_element default:1 "Yes" "No"]
 <label style="font-weight: bold; font-size: 18px !important" >Official (R50) </label>[radio official use_label_element default:1 "Yes" "No"]
-<h4>Provincial Registration Fees (per entry)</h4>
+<h1>Provincial Registration Fees (per entry)</h1>
 <label style="font-weight: bold; font-size: 18px !important" >(R50)</label>[radio prov use_label_element default:1 "Yes" "No"]
 <label style="font-weight: bold; font-size: 18px !important" > Payment Notification Upload
     [file* payment limit:4000 filetypes:pdf|jpg|jpeg|png|doc] </label>
 
 <br>
 <br>
-<h3>National Entry Acceptance</h3>
+<h1>National Entry Acceptance</h1>
 <label style="font-weight: bold; font-size: 18px !important" > Category
     [text* category] </label>
 <label style="font-weight: bold; font-size: 18px !important" > Team Name

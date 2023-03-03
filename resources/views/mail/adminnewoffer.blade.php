@@ -7,7 +7,7 @@
     <title>New Offer</title>
 </head>
 <body>
-<h3>New Offer Received:</h3>
+<h1>New Offer Received:</h1>
 
 
 <p>Title: {{$title}}</p>

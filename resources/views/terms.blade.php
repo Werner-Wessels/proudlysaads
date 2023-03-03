@@ -1,10 +1,11 @@
 @include('layout.main')
 
 <div class="p-16">
-    <h2 class="text-xl text-green-500 underline font-bold">General Terms & Condition</h2>
+
+    <h1 class="text-xl text-green-500 underline font-bold">General Terms & Condition</h1>
     <br>
     <br>
-    <h3 class="text-xl text-green-500 underline font-bold">Buyers Terms & Conditions</h3>
+    <h1 class="text-xl text-green-500 underline font-bold">Buyers Terms & Conditions</h1>
     <ol class="list-decimal text-white">
         <li>The items are to the best of Proudly SA Ads knowledge, an authentic item.</li>
         <li>Please make sure that you are happy with the condition of the items. As Proudly SA Ads will put forth a reasonable effort to ensure that items are as they are described, the final responsibility will fall upon you as the Buyer</li>
@@ -16,7 +17,7 @@
     <br>
 
 
-    <h3 class="text-xl text-green-500 underline font-bold">Payments</h3>
+    <h1 class="text-xl text-green-500 underline font-bold">Payments</h1>
     <ol class="list-decimal text-white">
         <li>All goods to be paid immediately, directly to the seller..</li>
         <li>Please take note that no bids will be able to be placed when payment of previous orders are still outstanding. To avoid accounts from bid suspension, send proof of payment to
@@ -26,7 +27,7 @@
     <br>
     <br>
 
-    <h3 class="text-xl text-green-500 underline font-bold">Collection, Transport and Delivery</h3>
+    <h1 class="text-xl text-green-500 underline font-bold">Collection, Transport and Delivery</h1>
     <ol class="text-white list-decimal">
         <li>Transport, Collection and Delivery must be arranged between the Seller and Buyer. Proudly SA Ads has no obligation towards any party for any fees towards the delivery what so ever.</li>
     </ol>
@@ -35,7 +36,7 @@
     <br><br>
 
 
-    <h3 class="text-xl text-green-500 underline font-bold">Refunds / Returns</h3>
+    <h1 class="text-xl text-green-500 underline font-bold">Refunds / Returns</h1>
     <ol class="text-white list-disc">
         <li>The Buyer must contact the Seller directly for any refunds or exchanges. Proudly SA Ads have no obligation toward anybody for any reason what so ever as the funds were not received in our bank account. All payments are made directly to the Sellers</li>
         <li>Buyers will be able to report faulty goods to Proudly SA Ads directly. We will launch an investigation on the Seller to establish if he placed false adverts, upon a negative result, we will block his account and name and shame them on Tik-Tok.</li>
@@ -43,11 +44,11 @@
     <br>
     <br>
 
-    <h3 class="text-xl font-bold text-green-500 underline ">General Terms & Condition – Sellers</h3>
+    <h1 class="text-xl font-bold text-green-500 underline ">General Terms & Condition – Sellers</h1>
     <p class="text-white">It is the sole responsibility of the seller to disclose all items to the best of their abilities.  Any faults, damages, or repairs on items to be sold should be disclosed with the submitting of said product.</p>
     <br>
 
-<h3 class="text-lg text-green-500">Item ownership</h3>
+<h1 class="text-lg text-green-500">Item ownership</h1>
 
 <ol class="text-white list-decimal">
     <li>All items to be sold should be the legal property of the seller, no items will be sold that has been stolen / under contract with third party / under any loan agreement.</li>
@@ -57,7 +58,7 @@
 
     <br>
     <br>
-    <h3 class="text-xl font-bold text-green-500 underline ">General Terms and Conditions</h3>
+    <h1 class="text-xl font-bold text-green-500 underline ">General Terms and Conditions</h1>
     <ol class="text-white list-decimal">
         <li>A 3 day FREE advertising window is allocated for all ads Proudly SA Ads Platform. </li>
         <li>Thereafter the ads may be placed on a further 3 day slot for R50 or R100 for 7 days. If the items are not sold within these time frames, the Seller may place the ads again at the R50 or R100 time frames</li>

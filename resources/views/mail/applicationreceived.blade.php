@@ -7,7 +7,7 @@
     <title>New Application</title>
 </head>
 <body>
-<h3>New Application Received:</h3>
+<h1>New Application Received:</h1>
 
 <p>Name and Surname: {{$application->name}}</p>
 <p>Phone Number: {{$application->phone}}</p>

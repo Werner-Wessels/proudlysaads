@@ -4,7 +4,7 @@
     <div class="flex justify-between items-center ">
       <span class="text-2xl cursor-pointer">
        <a class="z-10 " href="/" aria-label="logo">
-                        <img class=" max-h-52" src="{{ URL::asset('/storage/newproudly.png') }}" alt="" title=""/>
+                        <img class=" max-h-52" src="{{ URL::asset('/storage/newproudly.png') }}" alt="logo" title="Logo"/>
        </a>
       </span>
 
@@ -58,7 +58,6 @@
                     Logout
                 </button></a>
         @endauth
-        <h2 class=""></h2>
     </ul>
 </nav>
 

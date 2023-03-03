@@ -3,7 +3,7 @@
         <img class="rounded-t-lg p-8" src="{{ URL::asset('/storage/'.$listing->images[0]->img_path) }}" alt="product image">
     @endisset
     <div class="px-5 pb-5">
-        <h3 class="font-semibold text-xl tracking-tight text-white">{{$listing->title}}</h3>
+        <h1 class="font-semibold text-xl tracking-tight text-white">{{$listing->title}}</h1>
         <div class="items-center justify-between">
             <br>
             <p class="text-sm my-1 text-white"><strong>Condition: </strong>{{ucfirst(trans($listing->condition))}}</p>

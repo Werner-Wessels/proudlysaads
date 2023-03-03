@@ -7,7 +7,7 @@
     <title>New Listing</title>
 </head>
 <body>
-<h3>New Listing Received:</h3>
+<h1>New Listing Received:</h1>
 
 
 <p>Seller: {{$seller}}</p>

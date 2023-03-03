@@ -39,7 +39,7 @@
         <div class="">
             <div class="md:flex flex-wrap mt-8 p-8">
                 <div class="md:w-1/3 text-center content-center items-center justify-center justify-content-center">
-                    <h3 class="text-white text-2xl text-center">Step 1</h3>
+                    <h1 class="text-white text-2xl text-center">Step 1</h1>
 
                     <div class="flex items-center mx-auto"><x-svg.step1/></div>
 
@@ -47,14 +47,14 @@
 
                 </div>
                 <div class="md:w-1/3">
-                    <h3 class="text-white text-2xl text-center">Step 2</h3>
+                    <h1 class="text-white text-2xl text-center">Step 2</h1>
 
                     <x-svg.step2/>
 
                     <p class="p-8 text-center text-xl text-white">Our users will view the available listings and make an offer to the seller that can be accepted or declined.</p>
                 </div>
                 <div class="md:w-1/3">
-                    <h3 class="text-white text-2xl text-center">Step 3</h3>
+                    <h1 class="text-white text-2xl text-center">Step 3</h1>
 
                     <x-svg.step3/>
 
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="md:w-1/3">
-                    <h3 class="text-white text-2xl text-center">Step 4</h3>
+                    <h1 class="text-white text-2xl text-center">Step 4</h1>
 
                     <x-svg.step4/>
 
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="md:w-1/3">
-                    <h3 class="text-white text-2xl text-center">Step 5</h3>
+                    <h1 class="text-white text-2xl text-center">Step 5</h1>
 
                     <x-svg.step5/>
                     <p class="p-8 text-center text-xl text-white">Once the offers are vetted and all parties are satisfied, you will be paid an additional 1% of the agreed purchase price for advertising with Proudly SA Ads</p>

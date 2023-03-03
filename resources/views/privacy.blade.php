@@ -15,10 +15,10 @@
     <br>
     <h1 class="text-xl text-green-500 font-bold underline">Interpretation and Definitions</h1>
     <br>
-    <h2 class="text-green-500 text-lg">Interpretation</h2>
+    <h1 class="text-green-500 text-lg">Interpretation</h1>
     <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
     <br>
-    <h2 class="text-green-500 text-lg">Definitions</h2>
+    <hj class="text-green-500 text-lg">Definitions</hj>
     <p>For the purposes of this Privacy Policy:</p>
     <ul class="list-disc">
         <li>
@@ -60,9 +60,9 @@
     <br>
     <h1 class="text-xl text-green-500 font-bold underline">Collecting and Using Your Personal Data</h1>
     <br>
-    <h2 class="text-green-500 text-lg">Types of Data Collected</h2>
+    <h1 class="text-green-500 text-lg">Types of Data Collected</h1>
     <br>
-    <h3 class="text-green-500">Personal Data</h3>
+    <h1 class="text-green-500">Personal Data</h1>
     <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
     <ul class="list-disc">
         <li>
@@ -82,13 +82,13 @@
         </li>
     </ul>
     <br>
-    <h3 class="text-green-500">Usage Data</h3>
+    <h1 class="text-green-500">Usage Data</h1>
     <p>Usage Data is collected automatically when using the Service.</p>
     <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
     <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
     <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
     <br>
-    <h3 class="text-green-500">Tracking Technologies and Cookies</h3>
+    <h1 class="text-green-500">Tracking Technologies and Cookies</h1>
     <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
     <ul class="list-disc">
         <li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
@@ -118,7 +118,7 @@
     </ul>
     <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
     <br>
-    <h2 class="text-green-500 text-lg">Use of Your Personal Data</h2>
+    <h1 class="text-green-500 text-lg">Use of Your Personal Data</h1>
     <p>The Company may use Personal Data for the following purposes:</p>
     <ul class="list-disc">
         <li>
@@ -156,30 +156,30 @@
         <li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li>
     </ul>
     <br>
-    <h2 class="text-green-500 text-lg">Retention of Your Personal Data</h2>
+    <h1 class="text-green-500 text-lg">Retention of Your Personal Data</h1>
     <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
     <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
     <br>
-    <h2 class="text-green-500 text-lg">Transfer of Your Personal Data</h2>
+    <h1 class="text-green-500 text-lg">Transfer of Your Personal Data</h1>
     <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
     <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
     <p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
     <br>
-    <h2 class="text-green-500 text-lg">Delete Your Personal Data</h2>
+    <h1 class="text-green-500 text-lg">Delete Your Personal Data</h1>
     <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
     <p>Our Service may give You the ability to delete certain information about You from within the Service.</p>
     <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
     <p>Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
     <br>
-    <h2 class="text-green-500 text-lg">Disclosure of Your Personal Data</h2>
+    <h1 class="text-green-500 text-lg">Disclosure of Your Personal Data</h1>
     <br>
-    <h3 class="text-green-500">Business Transactions</h3>
+    <h1 class="text-green-500">Business Transactions</h1>
     <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
     <br>
-    <h3 class="text-green-500">Law enforcement</h3>
+    <h1 class="text-green-500">Law enforcement</h1>
     <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
     <br>
-    <h3 class="text-green-500">Other legal requirements</h3>
+    <h1 class="text-green-500">Other legal requirements</h1>
     <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
     <ul class="list-disc">
         <li>Comply with a legal obligation</li>
@@ -189,7 +189,7 @@
         <li>Protect against legal liability</li>
     </ul>
     <br>
-    <h2 class="text-green-500 text-lg">Security of Your Personal Data</h2>
+    <h1 class="text-green-500 text-lg">Security of Your Personal Data</h1>
     <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
 
     <br>

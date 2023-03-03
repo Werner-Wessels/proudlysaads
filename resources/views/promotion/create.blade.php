@@ -19,13 +19,13 @@
             </div>
 
             <div class="text-white">
-                <h3 class=" text-2xl">Banking Details:</h3>
+                <h1 class=" text-2xl">Banking Details:</h1>
                 <p>Account Holder: Proudly SA Ads</p>
                 <p>Banking Name: Capitec Bank</p>
                 <p>Acount Number: 133 538 7569</p>
                 <p>Branch Code: 470010</p>
                 <p>Reference Number: Your Email Address</p>
-                <p>Capitec Pay By Phone Number: 081 376 2954</p>
+                <p>Capitec Pay By Phone Number: 081 376 2954o</p>
 
                 <br>
                 <p class="font-bold">Please send proof of payment to the following email address: <a href="mailto:info@proudlysaads.co.za">info@proudlysaads.co.za</a></p>

@@ -7,7 +7,7 @@
     <title>New Listing</title>
 </head>
 <body>
-<h3>Please see message below from a user on Proudly SA Ads</h3>
+<h1>Please see message below from a user on Proudly SA Ads</h1>
 
 
 <p>Name: {{$name}}</p>

@@ -17,6 +17,8 @@
     </div>
 @endif
 @include('components.header')
+@include('components.corporate')
+
 @include('components.promotionHeader')
 @include('components.categories')
 <br>
@@ -38,42 +40,6 @@
         </button>
     </div>
 </section>
-
-{{--<div class="relative pt-40 pb-20 lg:pt-44 bg-gray-900">--}}
-{{--    <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">--}}
-{{--        <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-600 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto  xl:text-7xl text-white">How It <span class="relative text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500  from-green-400  to-green-500">Works</span>.</h1>--}}
-{{--        <div class="md:grid grid-cols-3 gap-4 border-white mt-10">--}}
-{{--            <div>--}}
-{{--                <h3 class="text-white text-2xl text-center">Step 1</h3>--}}
-
-{{--                <x-svg.step1/>--}}
-
-{{--                <p class="p-8 text-center text-xl text-white">List your movable goods for free on Proudly SA Ads. List the details of the item and your asking price.</p>--}}
-
-{{--            </div>--}}
-{{--            <div>--}}
-{{--                <h3 class="text-white text-2xl text-center">Step 2</h3>--}}
-
-{{--                <x-svg.step2/>--}}
-
-{{--                <p class="p-8 text-center text-xl text-white">Our users will view the available listings and make an offer to the seller that can be accepted or declined.</p>--}}
-{{--            </div>--}}
-{{--            <div>--}}
-{{--                <h3 class="text-white text-2xl text-center">Step 3</h3>--}}
-
-{{--                <x-svg.step3/>--}}
-
-{{--                <p class="p-8 text-center text-xl text-white">Allow our experienced TIckey Turners Branch Principal to facilitate the transaction to ensure that all parties get exactly what they are expecting.</p>--}}
-{{--            </div>--}}
-
-
-{{--        </div>--}}
-
-
-{{--    </div>--}}
-{{--</div>--}}
-
-{{--<x-call_to_action/>--}}
 
 <x-layout.footer/>
 

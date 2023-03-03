@@ -1,4 +1,4 @@
-<h2>Dear Admin</h2> <br>
+<h1>Dear Admin</h1> <br>
 You have got an email from : {{ $name }} <br><br>
 User details: <br><br>
 Name: {{ $name }} <br>
