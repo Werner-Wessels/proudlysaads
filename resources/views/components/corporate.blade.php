@@ -30,9 +30,9 @@
     </div>
     <div class="w-full 2xl:w-3/4 flex items-center justify-center px-8 md:px-32 lg:px-16 2xl:px-0 mx-auto -mt-8">
         <div class="w-full grid grid-cols-1 xl:grid-cols-3 gap-8">
+
             @include('components.company')
-            @include('components.company')
-            @include('components.company')
+
         </div>
     </div>
 </div>

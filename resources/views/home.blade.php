@@ -17,7 +17,7 @@
     </div>
 @endif
 @include('components.header')
-{{--@include('components.corporate')--}}
+@include('components.corporate')
 
 @include('components.promotionHeader')
 @include('components.categories')

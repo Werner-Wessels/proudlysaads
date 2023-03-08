@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Corporate;
 use App\Models\Listing;
 use App\Models\Location;
 use Illuminate\Http\Request;
@@ -19,6 +20,7 @@ class HomeController extends Controller
         return view('home', [
             'listings' => Listing::orderby('created_at', 'DESC')->with('category', 'subcategory','location')->where([['is_approved', '=', true],['is_active','=',true],['promoted','=',true]])->take(5)->get(),
             'categories' => Category::all(),
+            'corporates' => Corporate::all(),
             'latestListings' => Listing::orderBy('created_at', 'DESC')->with('category', 'location', 'images')->where([['is_approved', '=', true],['is_active','=',true]])->take(5)->get(),
         ]);
     }
