@@ -61,7 +61,7 @@
     <h1 class="text-xl font-bold text-green-500 underline ">General Terms and Conditions</h1>
     <ol class="text-white list-decimal">
         <li>A 3 day FREE advertising window is allocated for all ads Proudly SA Ads Platform. </li>
-        <li>Thereafter the ads may be placed on a further 3 day slot for R75 or R150 for 7 days. If the items are not sold within these time frames, the Seller may place the ads again at the R50 or R100 time frames</li>
+        <li>Thereafter the ads may be placed on a further 3 day slot for R75 or R150 for 7 days. If the items are not sold within these time frames, the Seller may place the ads again at the R75 or R150 time frames</li>
         <li>Publish items – all items listed to go through an approval process by Proudly SA Ads Head Office </li>
         <li>Item description must be detailed upon listing to answer all queries the Buyers may have to avoid delays in sales.</li>
         <li>The Seller agrees that Proudly SA Ads have the right to black list and/or block their profile immediately and/or Name and Shame any person who is selling faulty goods, fraudulent deals, non-delivery of goods or any other action by the Seller that results in loss or damage to the Buyer. The Seller agrees that no claim of any kind will be made towards Proudly SA Ads for any reason what so ever if the Seller's account is placed under suspension/blocked/black listing or name and shame process. This process will eliminate any scammers who tries to scam honest buyers.</li>
